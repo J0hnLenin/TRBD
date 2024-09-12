@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet1" msprop:Generator_DataSetName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Employee" msprop:Generator_RowEvHandlerName="EmployeeRowChangeEventHandler" msprop:Generator_RowDeletedName="EmployeeRowDeleted" msprop:Generator_RowDeletingName="EmployeeRowDeleting" msprop:Generator_RowEvArgName="EmployeeRowChangeEvent" msprop:Generator_TablePropName="Employee" msprop:Generator_RowChangedName="EmployeeRowChanged" msprop:Generator_RowChangingName="EmployeeRowChanging" msprop:Generator_TableClassName="EmployeeDataTable" msprop:Generator_RowClassName="EmployeeRow" msprop:Generator_TableVarName="tableEmployee" msprop:Generator_UserTableName="Employee">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:long" />
+              <xs:element name="name" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_UserColumnName="name" type="xs:string" minOccurs="0" />
+              <xs:element name="birthday" msprop:Generator_ColumnPropNameInRow="birthday" msprop:Generator_ColumnPropNameInTable="birthdayColumn" msprop:Generator_ColumnVarNameInTable="columnbirthday" msprop:Generator_UserColumnName="birthday" type="xs:string" minOccurs="0" />
+              <xs:element name="inn" msprop:Generator_ColumnPropNameInRow="inn" msprop:Generator_ColumnPropNameInTable="innColumn" msprop:Generator_ColumnVarNameInTable="columninn" msprop:Generator_UserColumnName="inn" type="xs:string" minOccurs="0" />
+              <xs:element name="snils" msprop:Generator_ColumnPropNameInRow="snils" msprop:Generator_ColumnPropNameInTable="snilsColumn" msprop:Generator_ColumnVarNameInTable="columnsnils" msprop:Generator_UserColumnName="snils" type="xs:string" minOccurs="0" />
+              <xs:element name="passport" msprop:Generator_ColumnPropNameInRow="passport" msprop:Generator_ColumnPropNameInTable="passportColumn" msprop:Generator_ColumnVarNameInTable="columnpassport" msprop:Generator_UserColumnName="passport" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Job" msprop:Generator_RowEvHandlerName="JobRowChangeEventHandler" msprop:Generator_RowDeletedName="JobRowDeleted" msprop:Generator_RowDeletingName="JobRowDeleting" msprop:Generator_RowEvArgName="JobRowChangeEvent" msprop:Generator_TablePropName="Job" msprop:Generator_RowChangedName="JobRowChanged" msprop:Generator_RowChangingName="JobRowChanging" msprop:Generator_TableClassName="JobDataTable" msprop:Generator_RowClassName="JobRow" msprop:Generator_TableVarName="tableJob" msprop:Generator_UserTableName="Job">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="employee_id" msprop:Generator_ColumnPropNameInRow="employee_id" msprop:Generator_ColumnPropNameInTable="employee_idColumn" msprop:Generator_ColumnVarNameInTable="columnemployee_id" msprop:Generator_UserColumnName="employee_id" type="xs:string" minOccurs="0" />
+              <xs:element name="start_date" msprop:Generator_ColumnPropNameInRow="start_date" msprop:Generator_ColumnPropNameInTable="start_dateColumn" msprop:Generator_ColumnVarNameInTable="columnstart_date" msprop:Generator_UserColumnName="start_date" type="xs:string" minOccurs="0" />
+              <xs:element name="finish_date" msprop:Generator_ColumnPropNameInRow="finish_date" msprop:Generator_ColumnPropNameInTable="finish_dateColumn" msprop:Generator_ColumnVarNameInTable="columnfinish_date" msprop:Generator_UserColumnName="finish_date" type="xs:string" minOccurs="0" />
+              <xs:element name="description" msprop:Generator_ColumnPropNameInRow="description" msprop:Generator_ColumnPropNameInTable="descriptionColumn" msprop:Generator_ColumnVarNameInTable="columndescription" msprop:Generator_UserColumnName="description" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="EmployeeKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Employee" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Job" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="JobKey1">
+      <xs:selector xpath=".//mstns:Job" />
+      <xs:field xpath="mstns:employee_id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
