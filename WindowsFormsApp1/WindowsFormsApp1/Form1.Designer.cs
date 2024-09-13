@@ -34,6 +34,7 @@ namespace WindowsFormsApp1
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new WindowsFormsApp1.DataSet1();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -72,6 +73,8 @@ namespace WindowsFormsApp1
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(689, 150);
             this.dataGridView1.TabIndex = 0;
+
+            this.dataGridView1.Columns.Add(new MaskedEditColumn("MyText") { Mask = @"00\:00\:00\,000" });
             // 
             // employeeBindingSource
             // 
