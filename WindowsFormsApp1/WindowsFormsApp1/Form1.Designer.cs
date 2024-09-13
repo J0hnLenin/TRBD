@@ -34,7 +34,6 @@ namespace WindowsFormsApp1
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new WindowsFormsApp1.DataSet1();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -73,8 +72,12 @@ namespace WindowsFormsApp1
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(689, 150);
             this.dataGridView1.TabIndex = 0;
-
-            this.dataGridView1.Columns.Add(new MaskedEditColumn("MyText") { Mask = @"00\:00\:00\,000" });
+            this.dataGridView1.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView1_CellBeginEdit);
+            this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
+            this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
+            this.dataGridView1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView1_Scroll);
+            this.dataGridView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridView1_KeyPress);
+            this.dataGridView1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyUp);
             // 
             // employeeBindingSource
             // 
@@ -175,7 +178,7 @@ namespace WindowsFormsApp1
             // 
             this.snilsDataGridViewTextBoxColumn.DataPropertyName = "snils";
             this.snilsDataGridViewTextBoxColumn.HeaderText = "snils";
-            this.snilsDataGridViewTextBoxColumn.MaxInputLength = 11;
+            this.snilsDataGridViewTextBoxColumn.MaxInputLength = 14;
             this.snilsDataGridViewTextBoxColumn.Name = "snilsDataGridViewTextBoxColumn";
             // 
             // passportDataGridViewTextBoxColumn
@@ -216,201 +219,12 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.DataGridViewTextBoxColumn startdateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn finishdateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn birthdayDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn innDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn snilsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passportDataGridViewTextBoxColumn;
-
-        class MaskedEditColumn : DataGridViewColumn
-        {
-            public MaskedEditColumn()
-                : base(new MaskedEditCell())
-            {
-
-            }
-            public override DataGridViewCell CellTemplate
-            {
-                get
-                {
-                    return base.CellTemplate;
-                }
-                set
-                {
-                    if ((value != null) && !value.GetType().IsAssignableFrom(typeof(MaskedEditCell)))
-                    {
-                        throw new InvalidCastException("Must be a MaskedEditCell");
-                    }
-                    base.CellTemplate = value;
-                }
-            }
-            private string mask;
-
-            public string Mask
-            {
-                get { return mask; }
-                set { mask = value; }
-            }
-            private Type validatingType;
-
-            public Type ValidatingType
-            {
-                get { return validatingType; }
-                set { validatingType = value; }
-            }
-
-            private char promtChar = '_';
-
-            public char PromtChar
-            {
-                get { return promtChar; }
-                set { promtChar = value; }
-            }
-            private MaskedEditCell MaskedEditCellTemplate
-            {
-                get { return this.CellTemplate as MaskedEditCell; }
-            }
-        }
-
-        class MaskedEditControl : MaskedTextBox, IDataGridViewEditingControl
-        {
-            private DataGridView dataGridViewControl;
-            private bool valueIsChanged = false;
-            private int rowIndexNum;
-            public void ApplyCellStyleToEditingControl(DataGridViewCellStyle dataGridViewCellStyle)
-            {
-                this.Font = dataGridViewCellStyle.Font;
-                this.BackColor = dataGridViewCellStyle.BackColor;
-                this.ForeColor = dataGridViewCellStyle.ForeColor;
-            }
-
-            public DataGridView EditingControlDataGridView
-            {
-                get
-                {
-                    return dataGridViewControl;
-                }
-                set
-                {
-                    dataGridViewControl = value;
-                }
-            }
-
-            public object EditingControlFormattedValue
-            {
-                get
-                {
-                    return this.Text;
-                }
-                set
-                {
-                    this.Text = value.ToString();
-                }
-            }
-
-            public int EditingControlRowIndex
-            {
-                get
-                {
-                    return rowIndexNum;
-                }
-                set
-                {
-                    rowIndexNum = value;
-                }
-            }
-
-            public bool EditingControlValueChanged
-            {
-                get
-                {
-                    return valueIsChanged;
-                }
-                set
-                {
-                    valueIsChanged = value;
-                }
-            }
-
-            public bool EditingControlWantsInputKey(Keys keyData, bool dataGridViewWantsInputKey)
-            {
-                return true;
-            }
-
-            public Cursor EditingPanelCursor
-            {
-                get { return base.Cursor; }
-            }
-
-            public object GetEditingControlFormattedValue(DataGridViewDataErrorContexts context)
-            {
-                return this.Text;
-            }
-
-            public void PrepareEditingControlForEdit(bool selectAll)
-            {
-                //throw new NotImplementedException();
-            }
-
-            public bool RepositionEditingControlOnValueChange
-            {
-                get { return false; }
-            }
-            protected override void OnTextChanged(EventArgs e)
-            {
-                valueIsChanged = true;
-                this.EditingControlDataGridView.NotifyCurrentCellDirty(true);
-                base.OnTextChanged(e);
-            }
-        }
-
-        class MaskedEditCell : DataGridViewTextBoxCell
-        {
-            public override void InitializeEditingControl(int rowIndex, object initialFormattedValue, DataGridViewCellStyle dataGridViewCellStyle)
-            {
-                base.InitializeEditingControl(rowIndex, initialFormattedValue, dataGridViewCellStyle);
-                MaskedEditColumn mec = OwningColumn as MaskedEditColumn;
-                MaskedEditControl mectrl = (MaskedEditControl)DataGridView.EditingControl;
-                try
-                {
-                    mectrl.Text = this.Value.ToString();
-                }
-                catch (Exception)
-                {
-                    mectrl.Text = string.Empty;
-                }
-                mectrl.Mask = mec.Mask;
-                mectrl.PromptChar = mec.PromtChar;
-                mectrl.ValidatingType = mec.ValidatingType;
-            }
-            public override Type EditType
-            {
-                get
-                {
-                    return typeof(MaskedEditControl);
-                }
-            }
-            public override Type ValueType
-            {
-                get
-                {
-                    return typeof(string);
-                }
-            }
-            public override object DefaultNewRowValue
-            {
-                get
-                {
-                    return string.Empty;
-                }
-            }
-            protected override void Paint(System.Drawing.Graphics graphics, System.Drawing.Rectangle clipBounds, System.Drawing.Rectangle cellBounds, int rowIndex, DataGridViewElementStates cellState, object value, object formattedValue, string errorText, DataGridViewCellStyle cellStyle, DataGridViewAdvancedBorderStyle advancedBorderStyle, DataGridViewPaintParts paintParts)
-            {
-                base.Paint(graphics, clipBounds, cellBounds, rowIndex, cellState, value, formattedValue, errorText, cellStyle, advancedBorderStyle, paintParts);
-            }
-        }
-
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn birthdayDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn innDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn snilsDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn passportDataGridViewTextBoxColumn;
     }
 
         
