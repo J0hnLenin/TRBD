@@ -1,4 +1,7 @@
-﻿namespace WindowsFormsApp1
+﻿using System.Windows.Forms;
+using System;
+
+namespace WindowsFormsApp1
 {
     partial class Form1
     {
@@ -29,13 +32,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.birthdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.innDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.snilsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new WindowsFormsApp1.DataSet1();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -45,6 +43,12 @@
             this.finishdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jobBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.birthdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.innDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.snilsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -68,48 +72,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(689, 150);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn.MaxInputLength = 100;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // birthdayDataGridViewTextBoxColumn
-            // 
-            this.birthdayDataGridViewTextBoxColumn.DataPropertyName = "birthday";
-            this.birthdayDataGridViewTextBoxColumn.HeaderText = "birthday";
-            this.birthdayDataGridViewTextBoxColumn.Name = "birthdayDataGridViewTextBoxColumn";
-            this.birthdayDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // innDataGridViewTextBoxColumn
-            // 
-            this.innDataGridViewTextBoxColumn.DataPropertyName = "inn";
-            this.innDataGridViewTextBoxColumn.HeaderText = "inn";
-            this.innDataGridViewTextBoxColumn.MaxInputLength = 12;
-            this.innDataGridViewTextBoxColumn.Name = "innDataGridViewTextBoxColumn";
-            // 
-            // snilsDataGridViewTextBoxColumn
-            // 
-            this.snilsDataGridViewTextBoxColumn.DataPropertyName = "snils";
-            this.snilsDataGridViewTextBoxColumn.HeaderText = "snils";
-            this.snilsDataGridViewTextBoxColumn.MaxInputLength = 11;
-            this.snilsDataGridViewTextBoxColumn.Name = "snilsDataGridViewTextBoxColumn";
-            // 
-            // passportDataGridViewTextBoxColumn
-            // 
-            this.passportDataGridViewTextBoxColumn.DataPropertyName = "passport";
-            this.passportDataGridViewTextBoxColumn.HeaderText = "passport";
-            this.passportDataGridViewTextBoxColumn.MaxInputLength = 11;
-            this.passportDataGridViewTextBoxColumn.Name = "passportDataGridViewTextBoxColumn";
             // 
             // employeeBindingSource
             // 
@@ -176,6 +138,50 @@
             this.jobBindingSource.DataMember = "Job";
             this.jobBindingSource.DataSource = this.dataSet1;
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.MaxInputLength = 100;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // birthdayDataGridViewTextBoxColumn
+            // 
+            this.birthdayDataGridViewTextBoxColumn.DataPropertyName = "birthday";
+            this.birthdayDataGridViewTextBoxColumn.HeaderText = "birthday";
+            this.birthdayDataGridViewTextBoxColumn.Name = "birthdayDataGridViewTextBoxColumn";
+            // 
+            // innDataGridViewTextBoxColumn
+            // 
+            this.innDataGridViewTextBoxColumn.DataPropertyName = "inn";
+            dataGridViewCellStyle1.Format = "N6";
+            dataGridViewCellStyle1.NullValue = null;
+            this.innDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.innDataGridViewTextBoxColumn.HeaderText = "inn";
+            this.innDataGridViewTextBoxColumn.MaxInputLength = 12;
+            this.innDataGridViewTextBoxColumn.Name = "innDataGridViewTextBoxColumn";
+            // 
+            // snilsDataGridViewTextBoxColumn
+            // 
+            this.snilsDataGridViewTextBoxColumn.DataPropertyName = "snils";
+            this.snilsDataGridViewTextBoxColumn.HeaderText = "snils";
+            this.snilsDataGridViewTextBoxColumn.MaxInputLength = 11;
+            this.snilsDataGridViewTextBoxColumn.Name = "snilsDataGridViewTextBoxColumn";
+            // 
+            // passportDataGridViewTextBoxColumn
+            // 
+            this.passportDataGridViewTextBoxColumn.DataPropertyName = "passport";
+            this.passportDataGridViewTextBoxColumn.HeaderText = "passport";
+            this.passportDataGridViewTextBoxColumn.MaxInputLength = 11;
+            this.passportDataGridViewTextBoxColumn.Name = "passportDataGridViewTextBoxColumn";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -202,17 +208,209 @@
         private DataSet1 dataSet1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.BindingSource jobBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeeidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startdateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn finishdateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn birthdayDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn innDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn snilsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passportDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn employeeidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn startdateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn finishdateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+
+        class MaskedEditColumn : DataGridViewColumn
+        {
+            public MaskedEditColumn()
+                : base(new MaskedEditCell())
+            {
+
+            }
+            public override DataGridViewCell CellTemplate
+            {
+                get
+                {
+                    return base.CellTemplate;
+                }
+                set
+                {
+                    if ((value != null) && !value.GetType().IsAssignableFrom(typeof(MaskedEditCell)))
+                    {
+                        throw new InvalidCastException("Must be a MaskedEditCell");
+                    }
+                    base.CellTemplate = value;
+                }
+            }
+            private string mask;
+
+            public string Mask
+            {
+                get { return mask; }
+                set { mask = value; }
+            }
+            private Type validatingType;
+
+            public Type ValidatingType
+            {
+                get { return validatingType; }
+                set { validatingType = value; }
+            }
+
+            private char promtChar = '_';
+
+            public char PromtChar
+            {
+                get { return promtChar; }
+                set { promtChar = value; }
+            }
+            private MaskedEditCell MaskedEditCellTemplate
+            {
+                get { return this.CellTemplate as MaskedEditCell; }
+            }
+        }
+
+        class MaskedEditControl : MaskedTextBox, IDataGridViewEditingControl
+        {
+            private DataGridView dataGridViewControl;
+            private bool valueIsChanged = false;
+            private int rowIndexNum;
+            public void ApplyCellStyleToEditingControl(DataGridViewCellStyle dataGridViewCellStyle)
+            {
+                this.Font = dataGridViewCellStyle.Font;
+                this.BackColor = dataGridViewCellStyle.BackColor;
+                this.ForeColor = dataGridViewCellStyle.ForeColor;
+            }
+
+            public DataGridView EditingControlDataGridView
+            {
+                get
+                {
+                    return dataGridViewControl;
+                }
+                set
+                {
+                    dataGridViewControl = value;
+                }
+            }
+
+            public object EditingControlFormattedValue
+            {
+                get
+                {
+                    return this.Text;
+                }
+                set
+                {
+                    this.Text = value.ToString();
+                }
+            }
+
+            public int EditingControlRowIndex
+            {
+                get
+                {
+                    return rowIndexNum;
+                }
+                set
+                {
+                    rowIndexNum = value;
+                }
+            }
+
+            public bool EditingControlValueChanged
+            {
+                get
+                {
+                    return valueIsChanged;
+                }
+                set
+                {
+                    valueIsChanged = value;
+                }
+            }
+
+            public bool EditingControlWantsInputKey(Keys keyData, bool dataGridViewWantsInputKey)
+            {
+                return true;
+            }
+
+            public Cursor EditingPanelCursor
+            {
+                get { return base.Cursor; }
+            }
+
+            public object GetEditingControlFormattedValue(DataGridViewDataErrorContexts context)
+            {
+                return this.Text;
+            }
+
+            public void PrepareEditingControlForEdit(bool selectAll)
+            {
+                //throw new NotImplementedException();
+            }
+
+            public bool RepositionEditingControlOnValueChange
+            {
+                get { return false; }
+            }
+            protected override void OnTextChanged(EventArgs e)
+            {
+                valueIsChanged = true;
+                this.EditingControlDataGridView.NotifyCurrentCellDirty(true);
+                base.OnTextChanged(e);
+            }
+        }
+
+        class MaskedEditCell : DataGridViewTextBoxCell
+        {
+            public override void InitializeEditingControl(int rowIndex, object initialFormattedValue, DataGridViewCellStyle dataGridViewCellStyle)
+            {
+                base.InitializeEditingControl(rowIndex, initialFormattedValue, dataGridViewCellStyle);
+                MaskedEditColumn mec = OwningColumn as MaskedEditColumn;
+                MaskedEditControl mectrl = (MaskedEditControl)DataGridView.EditingControl;
+                try
+                {
+                    mectrl.Text = this.Value.ToString();
+                }
+                catch (Exception)
+                {
+                    mectrl.Text = string.Empty;
+                }
+                mectrl.Mask = mec.Mask;
+                mectrl.PromptChar = mec.PromtChar;
+                mectrl.ValidatingType = mec.ValidatingType;
+            }
+            public override Type EditType
+            {
+                get
+                {
+                    return typeof(MaskedEditControl);
+                }
+            }
+            public override Type ValueType
+            {
+                get
+                {
+                    return typeof(string);
+                }
+            }
+            public override object DefaultNewRowValue
+            {
+                get
+                {
+                    return string.Empty;
+                }
+            }
+            protected override void Paint(System.Drawing.Graphics graphics, System.Drawing.Rectangle clipBounds, System.Drawing.Rectangle cellBounds, int rowIndex, DataGridViewElementStates cellState, object value, object formattedValue, string errorText, DataGridViewCellStyle cellStyle, DataGridViewAdvancedBorderStyle advancedBorderStyle, DataGridViewPaintParts paintParts)
+            {
+                base.Paint(graphics, clipBounds, cellBounds, rowIndex, cellState, value, formattedValue, errorText, cellStyle, advancedBorderStyle, paintParts);
+            }
+        }
+
     }
+
+        
+    
 }
 
