@@ -28,6 +28,8 @@ namespace WindowsFormsApp1 {
         
         private JobDataTable tableJob;
         
+        private global::System.Data.DataRelation relationFK_Employee_Job;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -218,6 +220,7 @@ namespace WindowsFormsApp1 {
                     this.tableJob.InitVars();
                 }
             }
+            this.relationFK_Employee_Job = this.Relations["FK_Employee_Job"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -232,6 +235,18 @@ namespace WindowsFormsApp1 {
             base.Tables.Add(this.tableEmployee);
             this.tableJob = new JobDataTable();
             base.Tables.Add(this.tableJob);
+            global::System.Data.ForeignKeyConstraint fkc;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_Employee_Job", new global::System.Data.DataColumn[] {
+                        this.tableEmployee.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableJob.employee_idColumn});
+            this.tableJob.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.None;
+            this.relationFK_Employee_Job = new global::System.Data.DataRelation("FK_Employee_Job", new global::System.Data.DataColumn[] {
+                        this.tableEmployee.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableJob.employee_idColumn}, false);
+            this.Relations.Add(this.relationFK_Employee_Job);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -444,7 +459,7 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EmployeeRow AddEmployeeRow(string name, string birthday, string inn, string snils, string passport) {
+            public EmployeeRow AddEmployeeRow(string name, System.DateTime birthday, string inn, string snils, string passport) {
                 EmployeeRow rowEmployeeRow = ((EmployeeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -497,7 +512,7 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columnid);
                 this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnname);
-                this.columnbirthday = new global::System.Data.DataColumn("birthday", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnbirthday = new global::System.Data.DataColumn("birthday", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbirthday);
                 this.columninn = new global::System.Data.DataColumn("inn", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columninn);
@@ -507,11 +522,28 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columnpassport);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("EmployeeKey1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnsnils}, false));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
+                                this.columninn}, false));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint3", new global::System.Data.DataColumn[] {
+                                this.columnpassport}, false));
                 this.columnid.AutoIncrement = true;
                 this.columnid.AutoIncrementSeed = -1;
                 this.columnid.AutoIncrementStep = -1;
                 this.columnid.AllowDBNull = false;
                 this.columnid.Unique = true;
+                this.columnname.AllowDBNull = false;
+                this.columnname.MaxLength = 100;
+                this.columninn.AllowDBNull = false;
+                this.columninn.Unique = true;
+                this.columninn.MaxLength = 12;
+                this.columnsnils.AllowDBNull = false;
+                this.columnsnils.Unique = true;
+                this.columnsnils.MaxLength = 11;
+                this.columnpassport.AllowDBNull = false;
+                this.columnpassport.Unique = true;
+                this.columnpassport.MaxLength = 11;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -765,14 +797,17 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public JobRow AddJobRow(string employee_id, string start_date, string finish_date, string description) {
+            public JobRow AddJobRow(EmployeeRow parentEmployeeRowByFK_Employee_Job, System.DateTime start_date, System.DateTime finish_date, string description) {
                 JobRow rowJobRow = ((JobRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        employee_id,
+                        null,
                         start_date,
                         finish_date,
                         description};
+                if ((parentEmployeeRowByFK_Employee_Job != null)) {
+                    columnValuesArray[1] = parentEmployeeRowByFK_Employee_Job[0];
+                }
                 rowJobRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowJobRow);
                 return rowJobRow;
@@ -780,7 +815,7 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public JobRow FindByid(int id) {
+            public JobRow FindByid(long id) {
                 return ((JobRow)(this.Rows.Find(new object[] {
                             id})));
             }
@@ -812,26 +847,26 @@ namespace WindowsFormsApp1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnid = new global::System.Data.DataColumn("id", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid);
-                this.columnemployee_id = new global::System.Data.DataColumn("employee_id", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnemployee_id = new global::System.Data.DataColumn("employee_id", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnemployee_id);
-                this.columnstart_date = new global::System.Data.DataColumn("start_date", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnstart_date = new global::System.Data.DataColumn("start_date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstart_date);
-                this.columnfinish_date = new global::System.Data.DataColumn("finish_date", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnfinish_date = new global::System.Data.DataColumn("finish_date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfinish_date);
                 this.columndescription = new global::System.Data.DataColumn("description", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndescription);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("JobKey1", new global::System.Data.DataColumn[] {
-                                this.columnemployee_id}, false));
                 this.columnid.AutoIncrement = true;
                 this.columnid.AutoIncrementSeed = -1;
                 this.columnid.AutoIncrementStep = -1;
                 this.columnid.AllowDBNull = false;
                 this.columnid.Unique = true;
-                this.columnemployee_id.Unique = true;
+                this.columnemployee_id.AllowDBNull = false;
+                this.columnstart_date.AllowDBNull = false;
+                this.columndescription.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -987,12 +1022,7 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string name {
                 get {
-                    try {
-                        return ((string)(this[this.tableEmployee.nameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'name\' в таблице \'Employee\' равно DBNull.", e);
-                    }
+                    return ((string)(this[this.tableEmployee.nameColumn]));
                 }
                 set {
                     this[this.tableEmployee.nameColumn] = value;
@@ -1001,10 +1031,10 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string birthday {
+            public System.DateTime birthday {
                 get {
                     try {
-                        return ((string)(this[this.tableEmployee.birthdayColumn]));
+                        return ((global::System.DateTime)(this[this.tableEmployee.birthdayColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'birthday\' в таблице \'Employee\' равно DBNull.", e);
@@ -1019,12 +1049,7 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string inn {
                 get {
-                    try {
-                        return ((string)(this[this.tableEmployee.innColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'inn\' в таблице \'Employee\' равно DBNull.", e);
-                    }
+                    return ((string)(this[this.tableEmployee.innColumn]));
                 }
                 set {
                     this[this.tableEmployee.innColumn] = value;
@@ -1035,12 +1060,7 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string snils {
                 get {
-                    try {
-                        return ((string)(this[this.tableEmployee.snilsColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'snils\' в таблице \'Employee\' равно DBNull.", e);
-                    }
+                    return ((string)(this[this.tableEmployee.snilsColumn]));
                 }
                 set {
                     this[this.tableEmployee.snilsColumn] = value;
@@ -1051,28 +1071,11 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string passport {
                 get {
-                    try {
-                        return ((string)(this[this.tableEmployee.passportColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'passport\' в таблице \'Employee\' равно DBNull.", e);
-                    }
+                    return ((string)(this[this.tableEmployee.passportColumn]));
                 }
                 set {
                     this[this.tableEmployee.passportColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsnameNull() {
-                return this.IsNull(this.tableEmployee.nameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetnameNull() {
-                this[this.tableEmployee.nameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1089,38 +1092,13 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsinnNull() {
-                return this.IsNull(this.tableEmployee.innColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetinnNull() {
-                this[this.tableEmployee.innColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IssnilsNull() {
-                return this.IsNull(this.tableEmployee.snilsColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetsnilsNull() {
-                this[this.tableEmployee.snilsColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IspassportNull() {
-                return this.IsNull(this.tableEmployee.passportColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetpassportNull() {
-                this[this.tableEmployee.passportColumn] = global::System.Convert.DBNull;
+            public JobRow[] GetJobRows() {
+                if ((this.Table.ChildRelations["FK_Employee_Job"] == null)) {
+                    return new JobRow[0];
+                }
+                else {
+                    return ((JobRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Employee_Job"])));
+                }
             }
         }
         
@@ -1140,9 +1118,9 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int id {
+            public long id {
                 get {
-                    return ((int)(this[this.tableJob.idColumn]));
+                    return ((long)(this[this.tableJob.idColumn]));
                 }
                 set {
                     this[this.tableJob.idColumn] = value;
@@ -1151,14 +1129,9 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string employee_id {
+            public long employee_id {
                 get {
-                    try {
-                        return ((string)(this[this.tableJob.employee_idColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'employee_id\' в таблице \'Job\' равно DBNull.", e);
-                    }
+                    return ((long)(this[this.tableJob.employee_idColumn]));
                 }
                 set {
                     this[this.tableJob.employee_idColumn] = value;
@@ -1167,14 +1140,9 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string start_date {
+            public System.DateTime start_date {
                 get {
-                    try {
-                        return ((string)(this[this.tableJob.start_dateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'start_date\' в таблице \'Job\' равно DBNull.", e);
-                    }
+                    return ((global::System.DateTime)(this[this.tableJob.start_dateColumn]));
                 }
                 set {
                     this[this.tableJob.start_dateColumn] = value;
@@ -1183,10 +1151,10 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string finish_date {
+            public System.DateTime finish_date {
                 get {
                     try {
-                        return ((string)(this[this.tableJob.finish_dateColumn]));
+                        return ((global::System.DateTime)(this[this.tableJob.finish_dateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'finish_date\' в таблице \'Job\' равно DBNull.", e);
@@ -1201,12 +1169,7 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string description {
                 get {
-                    try {
-                        return ((string)(this[this.tableJob.descriptionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'description\' в таблице \'Job\' равно DBNull.", e);
-                    }
+                    return ((string)(this[this.tableJob.descriptionColumn]));
                 }
                 set {
                     this[this.tableJob.descriptionColumn] = value;
@@ -1215,26 +1178,13 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isemployee_idNull() {
-                return this.IsNull(this.tableJob.employee_idColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setemployee_idNull() {
-                this[this.tableJob.employee_idColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isstart_dateNull() {
-                return this.IsNull(this.tableJob.start_dateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setstart_dateNull() {
-                this[this.tableJob.start_dateColumn] = global::System.Convert.DBNull;
+            public EmployeeRow EmployeeRow {
+                get {
+                    return ((EmployeeRow)(this.GetParentRow(this.Table.ParentRelations["FK_Employee_Job"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Employee_Job"]);
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1247,18 +1197,6 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setfinish_dateNull() {
                 this[this.tableJob.finish_dateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsdescriptionNull() {
-                return this.IsNull(this.tableJob.descriptionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetdescriptionNull() {
-                this[this.tableJob.descriptionColumn] = global::System.Convert.DBNull;
             }
         }
         
