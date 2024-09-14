@@ -46,5 +46,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void inn_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }
