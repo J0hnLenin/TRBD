@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -190,6 +191,38 @@ namespace WindowsFormsApp1
                 (dataGridView2.DataSource as DataTable).DefaultView.RowFilter = String.Format("employee_id = {0}", dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value);
             }
 
+        }
+
+        private void dataGridView1_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            if (e.ColumnIndex == 2)
+            {
+                string DateValue;
+                DateTime DateFormated;
+                
+                DateValue = maskedTextBox1.Text;
+                if (!DateTime.TryParseExact(DateValue, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateFormated))
+                {
+                    MessageBox.Show("value should match dd/MM/yyyy format");
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        private void dataGridView2_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            if (e.ColumnIndex == 2 || e.ColumnIndex == 3)
+            {
+                string DateValue;
+                DateTime DateFormated;
+
+                DateValue = maskedTextBox2.Text;
+                if (!DateTime.TryParseExact(DateValue, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateFormated))
+                {
+                    MessageBox.Show("value should match dd/MM/yyyy format");
+                    e.Cancel = true;
+                }
+            }
         }
     }
 }
