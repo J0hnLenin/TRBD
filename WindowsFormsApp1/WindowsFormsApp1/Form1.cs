@@ -39,9 +39,7 @@ namespace WindowsFormsApp1
             dataGridView2.CellEndEdit += new DataGridViewCellEventHandler(dataGridView2_CellEndEdit);
             dataGridView2.Scroll += new ScrollEventHandler(dataGridView2_Scroll);
 
-            string filePath = "Data.xml";
-            dataSet1.Clear();
-            dataSet1.ReadXml(filePath);
+            LoadFromXML();
 
         }
 
@@ -93,8 +91,7 @@ namespace WindowsFormsApp1
             dataSet1.Employee.AcceptChanges();
             dataGridView1.Update();
 
-            string filePath = "Data.xml";
-            dataSet1.WriteXml(filePath);
+            SaveToXML();
         }
 
         private void dataGridView1_Scroll(object sender, ScrollEventArgs e)
@@ -121,13 +118,13 @@ namespace WindowsFormsApp1
          
         }
 
-        private void SaveTo_XML()
+        private void SaveToXML()
         {
             string filePath = "Data.xml";
             dataSet1.WriteXml(filePath);
         }
 
-        private void LoadTo_XML()
+        private void LoadFromXML()
         {
             string filePath = "Data.xml";
             dataSet1.Clear();
@@ -180,8 +177,7 @@ namespace WindowsFormsApp1
             dataSet1.Job.AcceptChanges();
             dataGridView2.Update();
 
-            string filePath = "Data.xml";
-            dataSet1.WriteXml(filePath);
+            SaveToXML();
         }
 
         private void dataGridView2_Scroll(object sender, ScrollEventArgs e)
