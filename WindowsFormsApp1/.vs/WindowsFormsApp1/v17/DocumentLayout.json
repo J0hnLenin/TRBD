@@ -1,29 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ssa25\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\TRBD\\WindowsFormsApp1\\",
+  "WorkspaceRootPath": "C:\\Users\\Andrey\\Documents\\GitHub\\TRBD\\WindowsFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|c:\\users\\ssa25\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\trbd\\windowsformsapp1\\windowsformsapp1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|c:\\users\\andrey\\documents\\github\\trbd\\windowsformsapp1\\windowsformsapp1\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|c:\\users\\andrey\\documents\\github\\trbd\\windowsformsapp1\\windowsformsapp1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|c:\\users\\ssa25\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\trbd\\windowsformsapp1\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|c:\\users\\ssa25\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\trbd\\windowsformsapp1\\windowsformsapp1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Andrey\\Documents\\GitHub\\TRBD\\WindowsFormsApp1\\windowsformsapp1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\ssa25\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\TRBD\\WindowsFormsApp1\\windowsformsapp1\\dataset1.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
+      "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|c:\\users\\andrey\\documents\\github\\trbd\\windowsformsapp1\\windowsformsapp1\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Andrey\\Documents\\GitHub\\TRBD\\WindowsFormsApp1\\windowsformsapp1\\dataset1.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
       "RelativeMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\dataset1.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\ssa25\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\TRBD\\WindowsFormsApp1\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Andrey\\Documents\\GitHub\\TRBD\\WindowsFormsApp1\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Andrey\\Documents\\GitHub\\TRBD\\WindowsFormsApp1\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\ssa25\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\TRBD\\WindowsFormsApp1\\windowsformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\Andrey\\Documents\\GitHub\\TRBD\\WindowsFormsApp1\\windowsformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -50,24 +58,49 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form3.cs",
+              "DocumentMoniker": "C:\\Users\\Andrey\\Documents\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\Form3.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form3.cs",
+              "ToolTip": "C:\\Users\\Andrey\\Documents\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\Form3.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form3.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAkwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-14T20:02:26.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form3.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Andrey\\Documents\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\Form3.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form3.cs",
+              "ToolTip": "C:\\Users\\Andrey\\Documents\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\Form3.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\Form3.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-14T19:49:35.414Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Form2.cs",
-              "DocumentMoniker": "C:\\Users\\ssa25\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\Form2.cs",
+              "DocumentMoniker": "C:\\Users\\Andrey\\Documents\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\Form2.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\Form2.cs",
-              "ToolTip": "C:\\Users\\ssa25\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\Form2.cs",
+              "ToolTip": "C:\\Users\\Andrey\\Documents\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\Form2.cs",
               "RelativeToolTip": "WindowsFormsApp1\\Form2.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAnwC4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAkwB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-14T11:46:51.159Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form2.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\ssa25\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\Form2.cs",
+              "DocumentMoniker": "C:\\Users\\Andrey\\Documents\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\Form2.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\Form2.cs",
-              "ToolTip": "C:\\Users\\ssa25\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\Form2.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "ToolTip": "C:\\Users\\Andrey\\Documents\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\Form2.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "WindowsFormsApp1\\Form2.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-14T11:46:17.029Z",
@@ -75,11 +108,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\ssa25\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Andrey\\Documents\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1.cs",
-              "ToolTip": "C:\\Users\\ssa25\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs",
+              "ToolTip": "C:\\Users\\Andrey\\Documents\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs",
               "RelativeToolTip": "WindowsFormsApp1\\Form1.cs",
               "ViewState": "AgIAAD0AAAAAAAAAAAAcwEEAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -88,11 +121,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "DataSet1.xsd",
-              "DocumentMoniker": "C:\\Users\\ssa25\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\DataSet1.xsd",
+              "DocumentMoniker": "C:\\Users\\Andrey\\Documents\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\DataSet1.xsd",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\DataSet1.xsd",
-              "ToolTip": "C:\\Users\\ssa25\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\DataSet1.xsd",
+              "ToolTip": "C:\\Users\\Andrey\\Documents\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\DataSet1.xsd",
               "RelativeToolTip": "WindowsFormsApp1\\DataSet1.xsd",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
               "WhenOpened": "2024-09-14T07:05:27.513Z",
@@ -100,11 +133,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\ssa25\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Andrey\\Documents\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1.cs",
-              "ToolTip": "C:\\Users\\ssa25\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "ToolTip": "C:\\Users\\Andrey\\Documents\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "WindowsFormsApp1\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-12T09:51:41.244Z",
@@ -112,11 +145,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ssa25\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Andrey\\Documents\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\Program.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\Program.cs",
-              "ToolTip": "C:\\Users\\ssa25\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\Program.cs",
+              "ToolTip": "C:\\Users\\Andrey\\Documents\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\Program.cs",
               "RelativeToolTip": "WindowsFormsApp1\\Program.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

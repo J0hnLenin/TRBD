@@ -57,16 +57,20 @@
             // finish_date
             // 
             this.finish_date.Location = new System.Drawing.Point(163, 117);
+            this.finish_date.Mask = "00/00/0000";
             this.finish_date.Name = "finish_date";
             this.finish_date.Size = new System.Drawing.Size(100, 20);
             this.finish_date.TabIndex = 2;
+            this.finish_date.ValidatingType = typeof(System.DateTime);
             // 
             // start_date
             // 
             this.start_date.Location = new System.Drawing.Point(163, 91);
+            this.start_date.Mask = "00/00/0000";
             this.start_date.Name = "start_date";
             this.start_date.Size = new System.Drawing.Size(100, 20);
             this.start_date.TabIndex = 3;
+            this.start_date.ValidatingType = typeof(System.DateTime);
             // 
             // description
             // 

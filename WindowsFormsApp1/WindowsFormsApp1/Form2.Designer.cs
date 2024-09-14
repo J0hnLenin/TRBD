@@ -66,14 +66,17 @@
             // 
             this.birthday.Location = new System.Drawing.Point(120, 71);
             this.birthday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.birthday.Mask = "00/00/0000";
             this.birthday.Name = "birthday";
             this.birthday.Size = new System.Drawing.Size(182, 20);
             this.birthday.TabIndex = 2;
+            this.birthday.ValidatingType = typeof(System.DateTime);
             // 
             // inn
             // 
             this.inn.Location = new System.Drawing.Point(120, 95);
             this.inn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.inn.Mask = "000000000000";
             this.inn.Name = "inn";
             this.inn.Size = new System.Drawing.Size(182, 20);
             this.inn.TabIndex = 3;
@@ -83,6 +86,7 @@
             // 
             this.snils.Location = new System.Drawing.Point(120, 119);
             this.snils.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.snils.Mask = "000-000-000 00";
             this.snils.Name = "snils";
             this.snils.Size = new System.Drawing.Size(182, 20);
             this.snils.TabIndex = 4;
@@ -195,7 +199,7 @@
             this.Controls.Add(this.id);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "Редактирование информации о работнике";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
