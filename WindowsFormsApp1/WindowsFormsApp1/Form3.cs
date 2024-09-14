@@ -16,5 +16,25 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void label_emploee_id_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_finish_date_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_start_date_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_description_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
