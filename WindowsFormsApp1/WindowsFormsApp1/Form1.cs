@@ -230,5 +230,35 @@ namespace WindowsFormsApp1
                 }
             }
         }
+
+        private void NewEmploeeButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditEmploeeButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteEmploeeButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NewJobButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditJobButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteJobButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

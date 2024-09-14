@@ -32,7 +32,7 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new WindowsFormsApp1.DataSet1();
@@ -50,6 +50,12 @@ namespace WindowsFormsApp1
             this.innDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.snilsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NewEmploeeButton = new System.Windows.Forms.Button();
+            this.EditEmploeeButton = new System.Windows.Forms.Button();
+            this.DeleteEmploeeButton = new System.Windows.Forms.Button();
+            this.NewJobButton = new System.Windows.Forms.Button();
+            this.EditJobButton = new System.Windows.Forms.Button();
+            this.DeleteJobButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -108,7 +114,7 @@ namespace WindowsFormsApp1
             this.dataGridView2.DataSource = this.jobBindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(52, 247);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(689, 150);
+            this.dataGridView2.Size = new System.Drawing.Size(689, 182);
             this.dataGridView2.TabIndex = 1;
             this.dataGridView2.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView2_CellBeginEdit);
             this.dataGridView2.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellEndEdit);
@@ -180,9 +186,9 @@ namespace WindowsFormsApp1
             // innDataGridViewTextBoxColumn
             // 
             this.innDataGridViewTextBoxColumn.DataPropertyName = "inn";
-            dataGridViewCellStyle5.Format = "N6";
-            dataGridViewCellStyle5.NullValue = null;
-            this.innDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle7.Format = "N6";
+            dataGridViewCellStyle7.NullValue = null;
+            this.innDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
             this.innDataGridViewTextBoxColumn.HeaderText = "ИНН";
             this.innDataGridViewTextBoxColumn.MaxInputLength = 12;
             this.innDataGridViewTextBoxColumn.Name = "innDataGridViewTextBoxColumn";
@@ -203,12 +209,77 @@ namespace WindowsFormsApp1
             this.passportDataGridViewTextBoxColumn.Name = "passportDataGridViewTextBoxColumn";
             this.passportDataGridViewTextBoxColumn.Width = 135;
             // 
+            // NewEmploeeButton
+            // 
+            this.NewEmploeeButton.Location = new System.Drawing.Point(797, 31);
+            this.NewEmploeeButton.Name = "NewEmploeeButton";
+            this.NewEmploeeButton.Size = new System.Drawing.Size(183, 44);
+            this.NewEmploeeButton.TabIndex = 2;
+            this.NewEmploeeButton.Text = "Создать работника";
+            this.NewEmploeeButton.UseVisualStyleBackColor = true;
+            this.NewEmploeeButton.Click += new System.EventHandler(this.NewEmploeeButton_Click);
+            // 
+            // EditEmploeeButton
+            // 
+            this.EditEmploeeButton.Location = new System.Drawing.Point(797, 81);
+            this.EditEmploeeButton.Name = "EditEmploeeButton";
+            this.EditEmploeeButton.Size = new System.Drawing.Size(183, 44);
+            this.EditEmploeeButton.TabIndex = 3;
+            this.EditEmploeeButton.Text = "Редактировать работника";
+            this.EditEmploeeButton.UseVisualStyleBackColor = true;
+            this.EditEmploeeButton.Click += new System.EventHandler(this.EditEmploeeButton_Click);
+            // 
+            // DeleteEmploeeButton
+            // 
+            this.DeleteEmploeeButton.Location = new System.Drawing.Point(797, 131);
+            this.DeleteEmploeeButton.Name = "DeleteEmploeeButton";
+            this.DeleteEmploeeButton.Size = new System.Drawing.Size(183, 44);
+            this.DeleteEmploeeButton.TabIndex = 4;
+            this.DeleteEmploeeButton.Text = "Удалить работника";
+            this.DeleteEmploeeButton.UseVisualStyleBackColor = true;
+            this.DeleteEmploeeButton.Click += new System.EventHandler(this.DeleteEmploeeButton_Click);
+            // 
+            // NewJobButton
+            // 
+            this.NewJobButton.Location = new System.Drawing.Point(797, 247);
+            this.NewJobButton.Name = "NewJobButton";
+            this.NewJobButton.Size = new System.Drawing.Size(183, 44);
+            this.NewJobButton.TabIndex = 5;
+            this.NewJobButton.Text = "Создать запись работ";
+            this.NewJobButton.UseVisualStyleBackColor = true;
+            this.NewJobButton.Click += new System.EventHandler(this.NewJobButton_Click);
+            // 
+            // EditJobButton
+            // 
+            this.EditJobButton.Location = new System.Drawing.Point(797, 297);
+            this.EditJobButton.Name = "EditJobButton";
+            this.EditJobButton.Size = new System.Drawing.Size(183, 44);
+            this.EditJobButton.TabIndex = 6;
+            this.EditJobButton.Text = "Редактировать запись работ";
+            this.EditJobButton.UseVisualStyleBackColor = true;
+            this.EditJobButton.Click += new System.EventHandler(this.EditJobButton_Click);
+            // 
+            // DeleteJobButton
+            // 
+            this.DeleteJobButton.Location = new System.Drawing.Point(797, 347);
+            this.DeleteJobButton.Name = "DeleteJobButton";
+            this.DeleteJobButton.Size = new System.Drawing.Size(183, 44);
+            this.DeleteJobButton.TabIndex = 7;
+            this.DeleteJobButton.Text = "Удалить запись работ";
+            this.DeleteJobButton.UseVisualStyleBackColor = true;
+            this.DeleteJobButton.Click += new System.EventHandler(this.DeleteJobButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(992, 461);
+            this.Controls.Add(this.DeleteJobButton);
+            this.Controls.Add(this.EditJobButton);
+            this.Controls.Add(this.NewJobButton);
+            this.Controls.Add(this.DeleteEmploeeButton);
+            this.Controls.Add(this.EditEmploeeButton);
+            this.Controls.Add(this.NewEmploeeButton);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
@@ -243,6 +314,12 @@ namespace WindowsFormsApp1
         private DataGridViewTextBoxColumn innDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn snilsDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn passportDataGridViewTextBoxColumn;
+        private Button NewEmploeeButton;
+        private Button EditEmploeeButton;
+        private Button DeleteEmploeeButton;
+        private Button NewJobButton;
+        private Button EditJobButton;
+        private Button DeleteJobButton;
     }
 
         
