@@ -32,8 +32,14 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.birthdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.innDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.snilsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new WindowsFormsApp1.DataSet1();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -43,17 +49,15 @@ namespace WindowsFormsApp1
             this.finishdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jobBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.birthdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.innDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.snilsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.SaveTo_XML = new System.Windows.Forms.Button();
+            this.LoadTo_XML = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -78,6 +82,50 @@ namespace WindowsFormsApp1
             this.dataGridView1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView1_Scroll);
             this.dataGridView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridView1_KeyPress);
             this.dataGridView1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyUp);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.MaxInputLength = 100;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // birthdayDataGridViewTextBoxColumn
+            // 
+            this.birthdayDataGridViewTextBoxColumn.DataPropertyName = "birthday";
+            this.birthdayDataGridViewTextBoxColumn.HeaderText = "birthday";
+            this.birthdayDataGridViewTextBoxColumn.Name = "birthdayDataGridViewTextBoxColumn";
+            // 
+            // innDataGridViewTextBoxColumn
+            // 
+            this.innDataGridViewTextBoxColumn.DataPropertyName = "inn";
+            dataGridViewCellStyle3.Format = "N6";
+            dataGridViewCellStyle3.NullValue = null;
+            this.innDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.innDataGridViewTextBoxColumn.HeaderText = "inn";
+            this.innDataGridViewTextBoxColumn.MaxInputLength = 12;
+            this.innDataGridViewTextBoxColumn.Name = "innDataGridViewTextBoxColumn";
+            // 
+            // snilsDataGridViewTextBoxColumn
+            // 
+            this.snilsDataGridViewTextBoxColumn.DataPropertyName = "snils";
+            this.snilsDataGridViewTextBoxColumn.HeaderText = "snils";
+            this.snilsDataGridViewTextBoxColumn.MaxInputLength = 14;
+            this.snilsDataGridViewTextBoxColumn.Name = "snilsDataGridViewTextBoxColumn";
+            // 
+            // passportDataGridViewTextBoxColumn
+            // 
+            this.passportDataGridViewTextBoxColumn.DataPropertyName = "passport";
+            this.passportDataGridViewTextBoxColumn.HeaderText = "passport";
+            this.passportDataGridViewTextBoxColumn.MaxInputLength = 11;
+            this.passportDataGridViewTextBoxColumn.Name = "passportDataGridViewTextBoxColumn";
             // 
             // employeeBindingSource
             // 
@@ -144,55 +192,38 @@ namespace WindowsFormsApp1
             this.jobBindingSource.DataMember = "Job";
             this.jobBindingSource.DataSource = this.dataSet1;
             // 
-            // idDataGridViewTextBoxColumn
+            // employeeBindingSource1
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.employeeBindingSource1.DataMember = "Employee";
+            this.employeeBindingSource1.DataSource = this.dataSet1;
             // 
-            // nameDataGridViewTextBoxColumn
+            // SaveTo_XML
             // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn.MaxInputLength = 100;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.SaveTo_XML.Location = new System.Drawing.Point(666, 39);
+            this.SaveTo_XML.Name = "SaveTo_XML";
+            this.SaveTo_XML.Size = new System.Drawing.Size(75, 23);
+            this.SaveTo_XML.TabIndex = 4;
+            this.SaveTo_XML.Text = "Save XML";
+            this.SaveTo_XML.UseVisualStyleBackColor = true;
+            this.SaveTo_XML.Click += new System.EventHandler(this.SaveTo_XML_Click);
             // 
-            // birthdayDataGridViewTextBoxColumn
+            // LoadTo_XML
             // 
-            this.birthdayDataGridViewTextBoxColumn.DataPropertyName = "birthday";
-            this.birthdayDataGridViewTextBoxColumn.HeaderText = "birthday";
-            this.birthdayDataGridViewTextBoxColumn.Name = "birthdayDataGridViewTextBoxColumn";
-            // 
-            // innDataGridViewTextBoxColumn
-            // 
-            this.innDataGridViewTextBoxColumn.DataPropertyName = "inn";
-            dataGridViewCellStyle1.Format = "N6";
-            dataGridViewCellStyle1.NullValue = null;
-            this.innDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
-            this.innDataGridViewTextBoxColumn.HeaderText = "inn";
-            this.innDataGridViewTextBoxColumn.MaxInputLength = 12;
-            this.innDataGridViewTextBoxColumn.Name = "innDataGridViewTextBoxColumn";
-            // 
-            // snilsDataGridViewTextBoxColumn
-            // 
-            this.snilsDataGridViewTextBoxColumn.DataPropertyName = "snils";
-            this.snilsDataGridViewTextBoxColumn.HeaderText = "snils";
-            this.snilsDataGridViewTextBoxColumn.MaxInputLength = 14;
-            this.snilsDataGridViewTextBoxColumn.Name = "snilsDataGridViewTextBoxColumn";
-            // 
-            // passportDataGridViewTextBoxColumn
-            // 
-            this.passportDataGridViewTextBoxColumn.DataPropertyName = "passport";
-            this.passportDataGridViewTextBoxColumn.HeaderText = "passport";
-            this.passportDataGridViewTextBoxColumn.MaxInputLength = 11;
-            this.passportDataGridViewTextBoxColumn.Name = "passportDataGridViewTextBoxColumn";
+            this.LoadTo_XML.Location = new System.Drawing.Point(585, 39);
+            this.LoadTo_XML.Name = "LoadTo_XML";
+            this.LoadTo_XML.Size = new System.Drawing.Size(75, 23);
+            this.LoadTo_XML.TabIndex = 5;
+            this.LoadTo_XML.Text = "Load XML";
+            this.LoadTo_XML.UseVisualStyleBackColor = true;
+            this.LoadTo_XML.Click += new System.EventHandler(this.LoadTo_XML_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.LoadTo_XML);
+            this.Controls.Add(this.SaveTo_XML);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
@@ -203,6 +234,7 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -225,6 +257,9 @@ namespace WindowsFormsApp1
         private DataGridViewTextBoxColumn innDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn snilsDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn passportDataGridViewTextBoxColumn;
+        private BindingSource employeeBindingSource1;
+        private Button SaveTo_XML;
+        private Button LoadTo_XML;
     }
 
         

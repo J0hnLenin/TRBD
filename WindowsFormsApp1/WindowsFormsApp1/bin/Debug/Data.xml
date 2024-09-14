@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="yes"?>
+<DataSet1 xmlns="http://tempuri.org/DataSet1.xsd">
+  <Employee>
+    <id>1</id>
+    <name>Иван Петров</name>
+    <birthday>2000-01-01T00:00:00+05:00</birthday>
+    <inn>351324523523</inn>
+    <snils>123-442-42 38</snils>
+    <passport>7563 986372</passport>
+  </Employee>
+  <Employee>
+    <id>4</id>
+    <name>Григорий Зубарев</name>
+    <birthday>1989-12-12T00:00:00+05:00</birthday>
+    <inn>123445234523</inn>
+    <snils>312-123-31 23</snils>
+    <passport>5234 523453</passport>
+  </Employee>
+  <Employee>
+    <id>11</id>
+    <name>Пётр Лидов</name>
+    <birthday>1994-11-07T00:00:00+05:00</birthday>
+    <inn>123413456235</inn>
+    <snils>331-231-23 11</snils>
+    <passport>5132 451235</passport>
+  </Employee>
+</DataSet1>

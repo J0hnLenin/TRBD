@@ -99,5 +99,57 @@ namespace WindowsFormsApp1
         {
          
         }
+
+        private void update_button_Click(object sender, EventArgs e)
+        {
+            
+            //DataSet1.EmployeeDataTable EmployeesDataSet = new DataSet1.EmployeeDataTable();
+            //dataGridView1.DataSource.ReadXml(filePath);
+
+            //dataGridView1.DataSource = EmployeesDataSet;
+            //dataGridView1.DataMember = "employees";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DataSet1.EmployeeRow newEmployeeRow;
+
+            newEmployeeRow = dataSet1.Employee.NewEmployeeRow();
+            //newEmployeeRow.id = 5;
+            newEmployeeRow.name = "Andrey";
+            newEmployeeRow.birthday = DateTime.Today;
+            newEmployeeRow.inn = "622420069801";
+            newEmployeeRow.snils = "054-195-289 69";
+            newEmployeeRow.passport = "3124 923423";
+
+            // Add the row to the Region table
+            dataSet1.Employee.Rows.Add(newEmployeeRow);
+
+            // Save the new row to the database
+            dataSet1.AcceptChanges();
+            dataSet1.Employee.AcceptChanges();
+
+            
+
+            ///this.dataTa.Update(this.northwindDataSet.Region);
+        }
+
+        private void SaveTo_XML_Click(object sender, EventArgs e)
+        {
+            string filePath = "Data.xml";
+            dataSet1.WriteXml(filePath);
+        }
+
+        private void LoadTo_XML_Click(object sender, EventArgs e)
+        {
+            string filePath = "Data.xml";
+            dataSet1.Clear();
+            dataSet1.ReadXml(filePath);
+        }
+
+        private void GenerateEmploee_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+        }
     }
 }
