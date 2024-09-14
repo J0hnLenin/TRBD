@@ -34,8 +34,11 @@
   </Employee>
   <Employee>
     <id>5</id>
-    <name>Григорий Иванов</name>
-    <birthday>1999-12-12T00:00:00+05:00</birthday>
+    <name>Иванов Игорь</name>
+    <birthday>2001-02-01T00:00:00+05:00</birthday>
+    <inn>697236498712</inn>
+    <snils>763-469-17 82</snils>
+    <passport>1732 647126</passport>
   </Employee>
   <Job>
     <id>1</id>
@@ -57,5 +60,19 @@
     <start_date>2012-04-13T00:00:00+06:00</start_date>
     <finish_date>2012-05-14T00:00:00+06:00</finish_date>
     <description>Погрузка товара</description>
+  </Job>
+  <Job>
+    <id>4</id>
+    <employee_id>1</employee_id>
+    <start_date>2024-07-22T00:00:00+05:00</start_date>
+    <finish_date>2024-08-01T00:00:00+05:00</finish_date>
+    <description>Ремонт техники</description>
+  </Job>
+  <Job>
+    <id>6</id>
+    <employee_id>1</employee_id>
+    <start_date>2023-12-30T00:00:00+05:00</start_date>
+    <finish_date>2024-01-03T00:00:00+05:00</finish_date>
+    <description>Установка ПО</description>
   </Job>
 </DataSet1>

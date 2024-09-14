@@ -39,6 +39,10 @@ namespace WindowsFormsApp1
             dataGridView2.CellEndEdit += new DataGridViewCellEventHandler(dataGridView2_CellEndEdit);
             dataGridView2.Scroll += new ScrollEventHandler(dataGridView2_Scroll);
 
+            string filePath = "Data.xml";
+            dataSet1.Clear();
+            dataSet1.ReadXml(filePath);
+
         }
 
         private void dataGridView1_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
@@ -88,6 +92,9 @@ namespace WindowsFormsApp1
 
             dataSet1.Employee.AcceptChanges();
             dataGridView1.Update();
+
+            string filePath = "Data.xml";
+            dataSet1.WriteXml(filePath);
         }
 
         private void dataGridView1_Scroll(object sender, ScrollEventArgs e)
@@ -114,13 +121,13 @@ namespace WindowsFormsApp1
          
         }
 
-        private void SaveTo_XML_Click(object sender, EventArgs e)
+        private void SaveTo_XML()
         {
             string filePath = "Data.xml";
             dataSet1.WriteXml(filePath);
         }
 
-        private void LoadTo_XML_Click(object sender, EventArgs e)
+        private void LoadTo_XML()
         {
             string filePath = "Data.xml";
             dataSet1.Clear();
@@ -172,6 +179,9 @@ namespace WindowsFormsApp1
 
             dataSet1.Job.AcceptChanges();
             dataGridView2.Update();
+
+            string filePath = "Data.xml";
+            dataSet1.WriteXml(filePath);
         }
 
         private void dataGridView2_Scroll(object sender, ScrollEventArgs e)
@@ -195,7 +205,7 @@ namespace WindowsFormsApp1
 
         private void dataGridView1_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
-            if (e.ColumnIndex == 2)
+            if (e.ColumnIndex == 2 && maskedTextBox1.Visible)
             {
                 string DateValue;
                 DateTime DateFormated;
@@ -203,7 +213,7 @@ namespace WindowsFormsApp1
                 DateValue = maskedTextBox1.Text;
                 if (!DateTime.TryParseExact(DateValue, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateFormated))
                 {
-                    MessageBox.Show("value should match dd/MM/yyyy format");
+                    MessageBox.Show("Неверно введена дата. Вводите дату в формате день.месяц.год");
                     e.Cancel = true;
                 }
             }
@@ -211,7 +221,7 @@ namespace WindowsFormsApp1
 
         private void dataGridView2_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
-            if (e.ColumnIndex == 2 || e.ColumnIndex == 3)
+            if ((e.ColumnIndex == 2 || e.ColumnIndex == 3) && maskedTextBox2.Visible)
             {
                 string DateValue;
                 DateTime DateFormated;
@@ -219,7 +229,7 @@ namespace WindowsFormsApp1
                 DateValue = maskedTextBox2.Text;
                 if (!DateTime.TryParseExact(DateValue, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateFormated))
                 {
-                    MessageBox.Show("value should match dd/MM/yyyy format");
+                    MessageBox.Show("Неверно введена дата. Вводите дату в формате день.месяц.год");
                     e.Cancel = true;
                 }
             }
