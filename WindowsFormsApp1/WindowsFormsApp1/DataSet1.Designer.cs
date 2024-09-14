@@ -522,23 +522,14 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columnpassport);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("EmployeeKey1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnsnils}, false));
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint3", new global::System.Data.DataColumn[] {
-                                this.columnpassport}, false));
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint4", new global::System.Data.DataColumn[] {
-                                this.columninn}, false));
                 this.columnid.AutoIncrement = true;
                 this.columnid.AutoIncrementSeed = 1;
                 this.columnid.AllowDBNull = false;
                 this.columnid.Unique = true;
                 this.columnname.AllowDBNull = false;
                 this.columnname.MaxLength = 100;
-                this.columninn.Unique = true;
                 this.columninn.MaxLength = 12;
-                this.columnsnils.Unique = true;
                 this.columnsnils.MaxLength = 14;
-                this.columnpassport.Unique = true;
                 this.columnpassport.MaxLength = 11;
             }
             

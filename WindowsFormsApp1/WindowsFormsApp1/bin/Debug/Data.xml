@@ -9,7 +9,7 @@
     <passport>7563 986372</passport>
   </Employee>
   <Employee>
-    <id>4</id>
+    <id>2</id>
     <name>Григорий Зубарев</name>
     <birthday>1989-12-12T00:00:00+05:00</birthday>
     <inn>123445234523</inn>
@@ -17,11 +17,45 @@
     <passport>5234 523453</passport>
   </Employee>
   <Employee>
-    <id>11</id>
+    <id>3</id>
     <name>Пётр Лидов</name>
     <birthday>1994-11-07T00:00:00+05:00</birthday>
     <inn>123413456235</inn>
     <snils>331-231-23 11</snils>
     <passport>5132 451235</passport>
   </Employee>
+  <Employee>
+    <id>4</id>
+    <name>Николай Груздь</name>
+    <birthday>1998-02-21T00:00:00+05:00</birthday>
+    <inn>114234443523</inn>
+    <snils>123-445-62 33</snils>
+    <passport>4123 423452</passport>
+  </Employee>
+  <Employee>
+    <id>5</id>
+    <name>Григорий Иванов</name>
+    <birthday>1999-12-12T00:00:00+05:00</birthday>
+  </Employee>
+  <Job>
+    <id>1</id>
+    <employee_id>1</employee_id>
+    <start_date>2024-02-21T00:00:00+05:00</start_date>
+    <finish_date>2024-02-26T00:00:00+05:00</finish_date>
+    <description>Замена лампочки</description>
+  </Job>
+  <Job>
+    <id>2</id>
+    <employee_id>2</employee_id>
+    <start_date>2003-01-12T00:00:00+05:00</start_date>
+    <finish_date>2003-01-13T00:00:00+05:00</finish_date>
+    <description>Разгрузка товара</description>
+  </Job>
+  <Job>
+    <id>3</id>
+    <employee_id>2</employee_id>
+    <start_date>2012-04-13T00:00:00+06:00</start_date>
+    <finish_date>2012-05-14T00:00:00+06:00</finish_date>
+    <description>Погрузка товара</description>
+  </Job>
 </DataSet1>
