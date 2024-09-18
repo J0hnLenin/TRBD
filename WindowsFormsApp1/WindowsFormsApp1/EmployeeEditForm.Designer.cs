@@ -72,6 +72,7 @@
             this.birthday.Size = new System.Drawing.Size(182, 20);
             this.birthday.TabIndex = 2;
             this.birthday.ValidatingType = typeof(System.DateTime);
+            this.birthday.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.birthday_MaskInputRejected);
             // 
             // inn
             // 
@@ -152,6 +153,7 @@
             this.passport_series.Name = "passport_series";
             this.passport_series.Size = new System.Drawing.Size(182, 20);
             this.passport_series.TabIndex = 10;
+            this.passport_series.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.passport_series_MaskInputRejected);
             // 
             // passport_number
             // 

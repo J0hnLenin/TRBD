@@ -234,14 +234,14 @@ namespace WindowsFormsApp1
         private void NewEmploeeButton_Click(object sender, EventArgs e)
         {
             
-            EmployeeEditForm editForm = new EmployeeEditForm(true);
+            EmployeeEditForm editForm = new EmployeeEditForm(dataSet1, true);
             editForm.ShowDialog();
         }
 
         private void EditEmploeeButton_Click(object sender, EventArgs e)
         {
             long editId = Convert.ToInt64(dataGridView1.CurrentRow.Cells[0].Value);
-            EmployeeEditForm editForm = new EmployeeEditForm(false, editId);
+            EmployeeEditForm editForm = new EmployeeEditForm(dataSet1, false, editId);
             editForm.ShowDialog();
         }
 

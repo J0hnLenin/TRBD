@@ -71,6 +71,7 @@
             this.start_date.Size = new System.Drawing.Size(100, 20);
             this.start_date.TabIndex = 3;
             this.start_date.ValidatingType = typeof(System.DateTime);
+            this.start_date.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.start_date_MaskInputRejected);
             // 
             // description
             // 
@@ -128,7 +129,7 @@
             this.label_description.Text = "Описание работ";
             this.label_description.Click += new System.EventHandler(this.label_description_Click);
             // 
-            // Form3
+            // JobEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -143,7 +144,7 @@
             this.Controls.Add(this.finish_date);
             this.Controls.Add(this.emploee_id);
             this.Controls.Add(this.id);
-            this.Name = "Form3";
+            this.Name = "JobEditForm";
             this.Text = "Редактирование работ";
             this.ResumeLayout(false);
             this.PerformLayout();

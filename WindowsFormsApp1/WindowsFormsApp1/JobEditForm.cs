@@ -36,5 +36,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void start_date_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }
