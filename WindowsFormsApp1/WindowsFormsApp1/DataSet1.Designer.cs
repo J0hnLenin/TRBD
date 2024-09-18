@@ -339,7 +339,9 @@ namespace WindowsFormsApp1 {
             
             private global::System.Data.DataColumn columnsnils;
             
-            private global::System.Data.DataColumn columnpassport;
+            private global::System.Data.DataColumn columnpassport_series;
+            
+            private global::System.Data.DataColumn columnpassport_number;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -416,9 +418,17 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn passportColumn {
+            public global::System.Data.DataColumn passport_seriesColumn {
                 get {
-                    return this.columnpassport;
+                    return this.columnpassport_series;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn passport_numberColumn {
+                get {
+                    return this.columnpassport_number;
                 }
             }
             
@@ -459,7 +469,7 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EmployeeRow AddEmployeeRow(string name, System.DateTime birthday, string inn, string snils, string passport) {
+            public EmployeeRow AddEmployeeRow(string name, System.DateTime birthday, string inn, string snils, string passport_series, string passport_number) {
                 EmployeeRow rowEmployeeRow = ((EmployeeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -467,7 +477,8 @@ namespace WindowsFormsApp1 {
                         birthday,
                         inn,
                         snils,
-                        passport};
+                        passport_series,
+                        passport_number};
                 rowEmployeeRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowEmployeeRow);
                 return rowEmployeeRow;
@@ -502,7 +513,8 @@ namespace WindowsFormsApp1 {
                 this.columnbirthday = base.Columns["birthday"];
                 this.columninn = base.Columns["inn"];
                 this.columnsnils = base.Columns["snils"];
-                this.columnpassport = base.Columns["passport"];
+                this.columnpassport_series = base.Columns["passport_series"];
+                this.columnpassport_number = base.Columns["passport_number"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -518,8 +530,10 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columninn);
                 this.columnsnils = new global::System.Data.DataColumn("snils", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsnils);
-                this.columnpassport = new global::System.Data.DataColumn("passport", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnpassport);
+                this.columnpassport_series = new global::System.Data.DataColumn("passport_series", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpassport_series);
+                this.columnpassport_number = new global::System.Data.DataColumn("passport_number", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpassport_number);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("EmployeeKey1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AutoIncrement = true;
@@ -530,7 +544,8 @@ namespace WindowsFormsApp1 {
                 this.columnname.MaxLength = 100;
                 this.columninn.MaxLength = 12;
                 this.columnsnils.MaxLength = 14;
-                this.columnpassport.MaxLength = 11;
+                this.columnpassport_series.MaxLength = 20;
+                this.columnpassport_number.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1064,17 +1079,33 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string passport {
+            public string passport_series {
                 get {
                     try {
-                        return ((string)(this[this.tableEmployee.passportColumn]));
+                        return ((string)(this[this.tableEmployee.passport_seriesColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'passport\' в таблице \'Employee\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'passport_series\' в таблице \'Employee\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableEmployee.passportColumn] = value;
+                    this[this.tableEmployee.passport_seriesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string passport_number {
+                get {
+                    try {
+                        return ((string)(this[this.tableEmployee.passport_numberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'passport_number\' в таблице \'Employee\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEmployee.passport_numberColumn] = value;
                 }
             }
             
@@ -1116,14 +1147,26 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IspassportNull() {
-                return this.IsNull(this.tableEmployee.passportColumn);
+            public bool Ispassport_seriesNull() {
+                return this.IsNull(this.tableEmployee.passport_seriesColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetpassportNull() {
-                this[this.tableEmployee.passportColumn] = global::System.Convert.DBNull;
+            public void Setpassport_seriesNull() {
+                this[this.tableEmployee.passport_seriesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Ispassport_numberNull() {
+                return this.IsNull(this.tableEmployee.passport_numberColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setpassport_numberNull() {
+                this[this.tableEmployee.passport_numberColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

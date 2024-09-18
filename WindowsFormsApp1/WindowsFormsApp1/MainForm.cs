@@ -12,9 +12,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -233,7 +233,8 @@ namespace WindowsFormsApp1
 
         private void NewEmploeeButton_Click(object sender, EventArgs e)
         {
-
+            EditForm editForm = new EditForm();
+            editForm.ShowDialog();
         }
 
         private void EditEmploeeButton_Click(object sender, EventArgs e)
