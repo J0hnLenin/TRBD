@@ -39,4 +39,5 @@ C:\Users\ssa25\OneDrive\Документы\GitHub\TRBD\WindowsFormsApp1\WindowsF
 C:\Users\ssa25\OneDrive\Документы\GitHub\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\ssa25\OneDrive\Документы\GitHub\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 E:\Git\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainForm.resources
-E:\Git\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.EditForm.resources
+E:\Git\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.EmployeeEditForm.resources
+E:\Git\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.JobEditForm.resources

@@ -233,13 +233,16 @@ namespace WindowsFormsApp1
 
         private void NewEmploeeButton_Click(object sender, EventArgs e)
         {
-            EditForm editForm = new EditForm();
+            
+            EmployeeEditForm editForm = new EmployeeEditForm(true);
             editForm.ShowDialog();
         }
 
         private void EditEmploeeButton_Click(object sender, EventArgs e)
         {
-
+            long editId = Convert.ToInt64(dataGridView1.CurrentRow.Cells[0].Value);
+            EmployeeEditForm editForm = new EmployeeEditForm(false, editId);
+            editForm.ShowDialog();
         }
 
         private void DeleteEmploeeButton_Click(object sender, EventArgs e)
@@ -249,12 +252,14 @@ namespace WindowsFormsApp1
 
         private void NewJobButton_Click(object sender, EventArgs e)
         {
-
+            JobEditForm editForm = new JobEditForm();
+            editForm.ShowDialog();
         }
 
         private void EditJobButton_Click(object sender, EventArgs e)
         {
-
+            JobEditForm editForm = new JobEditForm();
+            editForm.ShowDialog();
         }
 
         private void DeleteJobButton_Click(object sender, EventArgs e)

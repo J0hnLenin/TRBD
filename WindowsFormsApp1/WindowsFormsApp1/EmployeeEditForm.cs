@@ -10,11 +10,15 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form2 : Form
+    public partial class EmployeeEditForm : Form
     {
-        public Form2()
+        Int64 editId;
+        public EmployeeEditForm(bool newEmployee, Int64 editId=0)
         {
             InitializeComponent();
+            this.editId = editId;
+            id.Text = editId.ToString();
+
         }
 
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)

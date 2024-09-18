@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Form3
+    partial class JobEditForm
     {
         /// <summary>
         /// Required designer variable.
