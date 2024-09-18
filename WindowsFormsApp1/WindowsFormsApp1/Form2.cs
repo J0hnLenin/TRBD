@@ -31,5 +31,25 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void id_label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inn_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }
