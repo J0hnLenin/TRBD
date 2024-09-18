@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "E:\\Git\\TRBD\\WindowsFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|e:\\git\\trbd\\windowsformsapp1\\windowsformsapp1\\employeeeditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\employeeeditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|e:\\git\\trbd\\windowsformsapp1\\windowsformsapp1\\employeeeditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\employeeeditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|e:\\git\\trbd\\windowsformsapp1\\windowsformsapp1\\jobeditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\jobeditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|e:\\git\\trbd\\windowsformsapp1\\windowsformsapp1\\jobeditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\jobeditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|e:\\git\\trbd\\windowsformsapp1\\windowsformsapp1\\employeeeditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\employeeeditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\Git\\TRBD\\WindowsFormsApp1\\windowsformsapp1\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|e:\\git\\trbd\\windowsformsapp1\\windowsformsapp1\\jobeditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\jobeditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|e:\\git\\trbd\\windowsformsapp1\\windowsformsapp1\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|e:\\git\\trbd\\windowsformsapp1\\windowsformsapp1\\jobeditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\jobeditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\Git\\TRBD\\WindowsFormsApp1\\windowsformsapp1\\dataset1.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
@@ -46,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
@@ -56,7 +56,7 @@
               "RelativeDocumentMoniker": "WindowsFormsApp1\\MainForm.Designer.cs",
               "ToolTip": "E:\\Git\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\MainForm.Designer.cs",
               "RelativeToolTip": "WindowsFormsApp1\\MainForm.Designer.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA1wEIBAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAA1wEQBAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-14T11:53:05.004Z",
               "IsPinned": true,
@@ -84,7 +84,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "JobEditForm.cs",
               "DocumentMoniker": "E:\\Git\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\JobEditForm.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\JobEditForm.cs",
@@ -97,7 +97,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "JobEditForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "E:\\Git\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\JobEditForm.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\JobEditForm.cs",
@@ -109,32 +109,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "EmployeeEditForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "E:\\Git\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\EmployeeEditForm.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\EmployeeEditForm.cs",
-              "ToolTip": "E:\\Git\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\EmployeeEditForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
-              "RelativeToolTip": "WindowsFormsApp1\\EmployeeEditForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "ToolTip": "E:\\Git\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\EmployeeEditForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\EmployeeEditForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-18T12:37:55.808Z",
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "EmployeeEditForm.cs",
               "DocumentMoniker": "E:\\Git\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\EmployeeEditForm.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\EmployeeEditForm.cs",
-              "ToolTip": "E:\\Git\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\EmployeeEditForm.cs*",
-              "RelativeToolTip": "WindowsFormsApp1\\EmployeeEditForm.cs*",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA4wBkAAABCAAAAAAAAAA==",
+              "ToolTip": "E:\\Git\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\EmployeeEditForm.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\EmployeeEditForm.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAYwD4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-18T12:37:48.409Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "E:\\Git\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\MainForm.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\MainForm.cs",
@@ -146,13 +146,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "MainForm.cs",
               "DocumentMoniker": "E:\\Git\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\MainForm.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\MainForm.cs",
               "ToolTip": "E:\\Git\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\MainForm.cs",
               "RelativeToolTip": "WindowsFormsApp1\\MainForm.cs",
-              "ViewState": "AgIAAKoAAAAAAAAAAADwv8MAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAgwBYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-13T11:28:40.107Z",
               "EditorCaption": ""

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -85,6 +86,19 @@ namespace WindowsFormsApp1
         private void passport_series_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
+        }
+
+        private void birthday_Validating(object sender, CancelEventArgs e)
+        {
+            string DateValue;
+            DateTime DateFormated;
+
+            DateValue = birthday.Text;
+            if (!DateTime.TryParseExact(DateValue, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateFormated))
+            {
+                MessageBox.Show("Неверно введена дата. Вводите дату в формате день.месяц.год");
+                e.Cancel = true;
+            }
         }
     }
 }

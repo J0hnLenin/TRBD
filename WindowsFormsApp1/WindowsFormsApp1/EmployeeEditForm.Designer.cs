@@ -65,6 +65,7 @@
             // 
             // birthday
             // 
+            this.birthday.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.birthday.Location = new System.Drawing.Point(120, 71);
             this.birthday.Margin = new System.Windows.Forms.Padding(2);
             this.birthday.Mask = "00/00/0000";
@@ -73,6 +74,7 @@
             this.birthday.TabIndex = 2;
             this.birthday.ValidatingType = typeof(System.DateTime);
             this.birthday.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.birthday_MaskInputRejected);
+            this.birthday.Validating += new System.ComponentModel.CancelEventHandler(this.birthday_Validating);
             // 
             // inn
             // 
@@ -200,8 +202,11 @@
             this.Controls.Add(this.birthday);
             this.Controls.Add(this.name);
             this.Controls.Add(this.id);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "EmployeeEditForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Редактирование информации о работнике";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);

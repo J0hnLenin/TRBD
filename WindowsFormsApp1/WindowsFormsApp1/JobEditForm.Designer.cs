@@ -144,7 +144,9 @@
             this.Controls.Add(this.finish_date);
             this.Controls.Add(this.emploee_id);
             this.Controls.Add(this.id);
+            this.MaximizeBox = false;
             this.Name = "JobEditForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Редактирование работ";
             this.ResumeLayout(false);
             this.PerformLayout();
