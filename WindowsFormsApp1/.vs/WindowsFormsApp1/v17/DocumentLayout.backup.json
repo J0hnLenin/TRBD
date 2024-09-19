@@ -113,7 +113,22 @@
               "ToolTip": "C:\\Git\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\EmployeeEditForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "WindowsFormsApp1\\EmployeeEditForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< HEAD
               "WhenOpened": "2024-09-18T12:37:55.808Z",
+=======
+              "WhenOpened": "2024-09-13T11:28:40.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "JobEditForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\ssa25\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\JobEditForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\JobEditForm.cs",
+              "ToolTip": "C:\\Users\\ssa25\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\JobEditForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "RelativeToolTip": "WindowsFormsApp1\\JobEditForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T12:39:30.649Z",
+>>>>>>> parent of 84d13c8 (smth wrong)
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             },
             {
@@ -122,7 +137,13 @@
               "Title": "JobEditForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Git\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\JobEditForm.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\JobEditForm.cs",
+<<<<<<< HEAD
               "ToolTip": "E:\\Git\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\JobEditForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+=======
+              "ToolTip": "C:\\Users\\ssa25\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\JobEditForm.cs*",
+              "RelativeToolTip": "WindowsFormsApp1\\JobEditForm.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAfAAAAAAAAAA==",
+>>>>>>> parent of 84d13c8 (smth wrong)
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-18T12:39:30.649Z"
             },
