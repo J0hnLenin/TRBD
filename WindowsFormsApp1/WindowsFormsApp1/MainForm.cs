@@ -149,19 +149,26 @@ namespace WindowsFormsApp1
 
         private void NewJobButton_Click(object sender, EventArgs e)
         {
-            JobEditForm editForm = new JobEditForm();
+
+            long parrentId = Convert.ToInt64(dataGridView1.CurrentRow.Cells[0].Value);
+            long editId = Convert.ToInt64(dataGridView2.CurrentRow.Cells[0].Value);
+            JobEditForm editForm = new JobEditForm(dataSet1, true, parrentId);
             editForm.ShowDialog();
         }
 
         private void EditJobButton_Click(object sender, EventArgs e)
         {
-            JobEditForm editForm = new JobEditForm();
+
+            long parrentId = Convert.ToInt64(dataGridView1.CurrentRow.Cells[0].Value);
+            long editId = Convert.ToInt64(dataGridView2.CurrentRow.Cells[0].Value);
+            JobEditForm editForm = new JobEditForm(dataSet1, false, parrentId, editId);
             editForm.ShowDialog();
         }
 
         private void DeleteJobButton_Click(object sender, EventArgs e)
         {
-
+            int rowIndex = dataGridView2.CurrentRow.Index;
+            dataSet1.Job.Rows.RemoveAt(rowIndex);
         }
     }
 }

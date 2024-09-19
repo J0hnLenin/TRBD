@@ -65,6 +65,7 @@
             this.finish_date.Size = new System.Drawing.Size(135, 32);
             this.finish_date.TabIndex = 2;
             this.finish_date.ValidatingType = typeof(System.DateTime);
+            this.finish_date.Validating += new System.ComponentModel.CancelEventHandler(this.finish_date_Validating);
             // 
             // start_date
             // 
@@ -76,6 +77,7 @@
             this.start_date.TabIndex = 3;
             this.start_date.ValidatingType = typeof(System.DateTime);
             this.start_date.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.start_date_MaskInputRejected);
+            this.start_date.Validating += new System.ComponentModel.CancelEventHandler(this.start_date_Validating);
             // 
             // description
             // 
@@ -158,6 +160,8 @@
             this.Name = "JobEditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Редактирование работ";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.JobEditForm_FormClosed);
+            this.Load += new System.EventHandler(this.JobEditForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

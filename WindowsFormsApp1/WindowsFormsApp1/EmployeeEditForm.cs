@@ -96,11 +96,15 @@ namespace WindowsFormsApp1
             DateTime DateFormated;
 
             DateValue = birthday.Text;
-            if (!DateTime.TryParseExact(DateValue, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateFormated))
+            if (DateValue != "  .  .")
             {
-                MessageBox.Show("Неверно введена дата. Вводите дату в формате день.месяц.год");
-                e.Cancel = true;
+                if (!DateTime.TryParseExact(DateValue, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateFormated))
+                {
+                    MessageBox.Show("Неверно введена дата. Вводите дату в формате день.месяц.год");
+                    e.Cancel = true;
+                }
             }
+            
         }
 
         private void SaveEmployee()
