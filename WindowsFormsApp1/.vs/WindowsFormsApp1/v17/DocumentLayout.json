@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Git\\TRBD\\WindowsFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Git\\TRBD\\WindowsFormsApp1\\windowsformsapp1\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|c:\\git\\trbd\\windowsformsapp1\\windowsformsapp1\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -19,7 +19,7 @@
       "RelativeMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|c:\\git\\trbd\\windowsformsapp1\\windowsformsapp1\\employeeeditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Git\\TRBD\\WindowsFormsApp1\\windowsformsapp1\\employeeeditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7482E06E-4071-48DA-AF2D-D5EB14D09F02}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\employeeeditform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -59,8 +59,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQBAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-14T11:53:05.004Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -74,7 +73,7 @@
               "RelativeDocumentMoniker": "WindowsFormsApp1\\MainForm.cs",
               "ToolTip": "C:\\Git\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\MainForm.cs",
               "RelativeToolTip": "WindowsFormsApp1\\MainForm.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAA7wJIAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAkwJIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-13T11:28:40.107Z",
               "EditorCaption": ""
@@ -89,8 +88,7 @@
               "RelativeToolTip": "WindowsFormsApp1\\EmployeeEditForm.cs",
               "ViewState": "AgIAAFQAAAAAAAAAAAAAAGUAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T12:37:48.409Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-18T12:37:48.409Z"
             },
             {
               "$type": "Document",
@@ -101,8 +99,7 @@
               "ToolTip": "C:\\Git\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "WindowsFormsApp1\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-12T09:51:41.244Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2024-09-12T09:51:41.244Z"
             },
             {
               "$type": "Document",
@@ -113,8 +110,7 @@
               "ToolTip": "C:\\Git\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\EmployeeEditForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "WindowsFormsApp1\\EmployeeEditForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T12:37:55.808Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2024-09-18T12:37:55.808Z"
             },
             {
               "$type": "Document",
@@ -147,8 +143,7 @@
               "ToolTip": "C:\\Git\\TRBD\\WindowsFormsApp1\\WindowsFormsApp1\\DataSet1.xsd",
               "RelativeToolTip": "WindowsFormsApp1\\DataSet1.xsd",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
-              "WhenOpened": "2024-09-14T07:05:27.513Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-14T07:05:27.513Z"
             },
             {
               "$type": "Document",
