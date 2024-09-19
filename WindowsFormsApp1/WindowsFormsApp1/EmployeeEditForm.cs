@@ -110,7 +110,10 @@ namespace WindowsFormsApp1
                 DataRow newRow = dataSet1.Employee.NewRow();
                 
                 newRow["name"] = name.Text;
-                newRow["birthday"] = birthday.Text;
+                if (birthday.Text != "  .  .")
+                {
+                    newRow["birthday"] = birthday.Text;
+                }
                 newRow["inn"] = inn.Text;
                 newRow["snils"] = snils.Text;
                 newRow["passport_series"] = passport_series.Text;

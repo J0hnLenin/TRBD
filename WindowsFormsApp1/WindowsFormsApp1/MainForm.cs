@@ -133,7 +133,18 @@ namespace WindowsFormsApp1
 
         private void DeleteEmploeeButton_Click(object sender, EventArgs e)
         {
+            Int64 rowId = Convert.ToInt64(dataGridView1.CurrentRow.Cells[0].Value);
+            DataRow[] rows = dataSet1.Job.Select($"employee_id = {rowId}");
 
+            if (rows.Length == 0)
+            {
+                int rowIndex = dataGridView1.CurrentRow.Index;
+                dataSet1.Employee.Rows.RemoveAt(rowIndex);
+            }
+            else
+            {
+                MessageBox.Show("Нельзя удались работника у которого имеются работы");
+            }
         }
 
         private void NewJobButton_Click(object sender, EventArgs e)
