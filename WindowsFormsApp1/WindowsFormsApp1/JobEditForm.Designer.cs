@@ -34,26 +34,28 @@
             this.label_start_date = new System.Windows.Forms.Label();
             this.label_finish_date = new System.Windows.Forms.Label();
             this.label_description = new System.Windows.Forms.Label();
+            this.emploee_id = new System.Windows.Forms.MaskedTextBox();
+            this.id = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // finish_date
             // 
-            this.finish_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.finish_date.Location = new System.Drawing.Point(215, 78);
+            this.finish_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.finish_date.Location = new System.Drawing.Point(225, 70);
             this.finish_date.Mask = "00/00/0000";
             this.finish_date.Name = "finish_date";
-            this.finish_date.Size = new System.Drawing.Size(95, 27);
+            this.finish_date.Size = new System.Drawing.Size(97, 27);
             this.finish_date.TabIndex = 2;
             this.finish_date.ValidatingType = typeof(System.DateTime);
             this.finish_date.Validating += new System.ComponentModel.CancelEventHandler(this.finish_date_Validating);
             // 
             // start_date
             // 
-            this.start_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.start_date.Location = new System.Drawing.Point(215, 42);
+            this.start_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.start_date.Location = new System.Drawing.Point(225, 35);
             this.start_date.Mask = "00/00/0000";
             this.start_date.Name = "start_date";
-            this.start_date.Size = new System.Drawing.Size(95, 27);
+            this.start_date.Size = new System.Drawing.Size(97, 27);
             this.start_date.TabIndex = 3;
             this.start_date.ValidatingType = typeof(System.DateTime);
             this.start_date.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.start_date_MaskInputRejected);
@@ -61,20 +63,19 @@
             // 
             // description
             // 
-            this.description.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.description.Location = new System.Drawing.Point(215, 109);
+            this.description.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.description.Location = new System.Drawing.Point(225, 111);
             this.description.Name = "description";
-            this.description.ShortcutsEnabled = false;
-            this.description.Size = new System.Drawing.Size(222, 27);
+            this.description.Size = new System.Drawing.Size(212, 27);
             this.description.TabIndex = 4;
             // 
             // label_start_date
             // 
             this.label_start_date.AutoSize = true;
-            this.label_start_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label_start_date.Location = new System.Drawing.Point(12, 45);
+            this.label_start_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_start_date.Location = new System.Drawing.Point(18, 38);
             this.label_start_date.Name = "label_start_date";
-            this.label_start_date.Size = new System.Drawing.Size(170, 22);
+            this.label_start_date.Size = new System.Drawing.Size(172, 20);
             this.label_start_date.TabIndex = 7;
             this.label_start_date.Text = "Дата начала работ";
             this.label_start_date.Click += new System.EventHandler(this.label_start_date_Click);
@@ -82,10 +83,10 @@
             // label_finish_date
             // 
             this.label_finish_date.AutoSize = true;
-            this.label_finish_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label_finish_date.Location = new System.Drawing.Point(12, 78);
+            this.label_finish_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_finish_date.Location = new System.Drawing.Point(18, 77);
             this.label_finish_date.Name = "label_finish_date";
-            this.label_finish_date.Size = new System.Drawing.Size(199, 22);
+            this.label_finish_date.Size = new System.Drawing.Size(201, 20);
             this.label_finish_date.TabIndex = 8;
             this.label_finish_date.Text = "Дата окончания работ";
             this.label_finish_date.Click += new System.EventHandler(this.label_finish_date_Click);
@@ -93,13 +94,33 @@
             // label_description
             // 
             this.label_description.AutoSize = true;
-            this.label_description.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label_description.Location = new System.Drawing.Point(12, 112);
+            this.label_description.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_description.Location = new System.Drawing.Point(18, 118);
             this.label_description.Name = "label_description";
-            this.label_description.Size = new System.Drawing.Size(146, 22);
+            this.label_description.Size = new System.Drawing.Size(146, 20);
             this.label_description.TabIndex = 9;
             this.label_description.Text = "Описание работ";
             this.label_description.Click += new System.EventHandler(this.label_description_Click);
+            // 
+            // emploee_id
+            // 
+            this.emploee_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.emploee_id.Location = new System.Drawing.Point(2, 2);
+            this.emploee_id.Name = "emploee_id";
+            this.emploee_id.ReadOnly = true;
+            this.emploee_id.Size = new System.Drawing.Size(0, 32);
+            this.emploee_id.TabIndex = 1;
+            this.emploee_id.Visible = false;
+            // 
+            // id
+            // 
+            this.id.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.id.Location = new System.Drawing.Point(2, 2);
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Size = new System.Drawing.Size(0, 32);
+            this.id.TabIndex = 0;
+            this.id.Visible = false;
             // 
             // JobEditForm
             // 
@@ -112,6 +133,8 @@
             this.Controls.Add(this.description);
             this.Controls.Add(this.start_date);
             this.Controls.Add(this.finish_date);
+            this.Controls.Add(this.emploee_id);
+            this.Controls.Add(this.id);
             this.MaximizeBox = false;
             this.Name = "JobEditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -130,5 +153,7 @@
         private System.Windows.Forms.Label label_start_date;
         private System.Windows.Forms.Label label_finish_date;
         private System.Windows.Forms.Label label_description;
+        private System.Windows.Forms.MaskedTextBox emploee_id;
+        private System.Windows.Forms.MaskedTextBox id;
     }
 }
