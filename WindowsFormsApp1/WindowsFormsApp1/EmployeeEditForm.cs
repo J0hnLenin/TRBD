@@ -15,12 +15,14 @@ namespace WindowsFormsApp1
     {
         Int64 editId;
         private DataSet1 dataSet1;
+        bool newEmployee;
 
         public EmployeeEditForm(DataSet1 dataSet1, bool newEmployee, Int64 editId=0)
         {
             InitializeComponent();
             this.editId = editId;
             this.dataSet1 = dataSet1;
+            this.newEmployee = newEmployee;
             id.Text = editId.ToString();
 
             if (!newEmployee)
@@ -99,6 +101,44 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Неверно введена дата. Вводите дату в формате день.месяц.год");
                 e.Cancel = true;
             }
+        }
+
+        private void SaveEmployee()
+        {
+            if (newEmployee)
+            {
+                DataRow newRow = dataSet1.Employee.NewRow();
+                
+                newRow["name"] = name.Text;
+                newRow["birthday"] = birthday.Text;
+                newRow["inn"] = inn.Text;
+                newRow["snils"] = snils.Text;
+                newRow["passport_series"] = passport_series.Text;
+                newRow["passport_number"] = passport_number.Text;
+                
+                dataSet1.Employee.Rows.Add(newRow);
+            
+            }
+            else
+            {
+                DataRow[] rows = dataSet1.Employee.Select($"id = {editId}");
+
+                if (rows.Length > 0)
+                {
+                    rows[0]["name"] = name.Text;
+                    rows[0]["birthday"] = birthday.Text;
+                    rows[0]["inn"] = inn.Text;
+                    rows[0]["snils"] = snils.Text;
+                    rows[0]["passport_series"] = passport_series.Text;
+                    rows[0]["passport_number"] = passport_number.Text;
+                }
+            }
+        }
+
+        private void EmployeeEditForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SaveEmployee();
+            dataSet1.Employee.AcceptChanges();
         }
     }
 }
