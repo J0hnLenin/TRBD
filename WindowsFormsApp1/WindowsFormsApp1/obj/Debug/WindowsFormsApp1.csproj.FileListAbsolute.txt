@@ -44,3 +44,15 @@ C:\Git\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.JobEdit
 C:\Users\ssa25\OneDrive\Документы\GitHub\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.EmployeeEditForm.resources
 C:\Users\ssa25\OneDrive\Документы\GitHub\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainForm.resources
 C:\Users\ssa25\OneDrive\Документы\GitHub\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.JobEditForm.resources
+C:\Users\Andrey\Documents\GitHub\TRBD\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Andrey\Documents\GitHub\TRBD\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Andrey\Documents\GitHub\TRBD\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Andrey\Documents\GitHub\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\Andrey\Documents\GitHub\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.EmployeeEditForm.resources
+C:\Users\Andrey\Documents\GitHub\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainForm.resources
+C:\Users\Andrey\Documents\GitHub\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.JobEditForm.resources
+C:\Users\Andrey\Documents\GitHub\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Andrey\Documents\GitHub\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\Andrey\Documents\GitHub\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\Andrey\Documents\GitHub\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Andrey\Documents\GitHub\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
