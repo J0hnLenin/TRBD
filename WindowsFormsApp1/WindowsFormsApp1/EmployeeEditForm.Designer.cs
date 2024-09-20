@@ -46,31 +46,34 @@
             // 
             // id
             // 
-            this.id.Location = new System.Drawing.Point(180, 35);
+            this.id.Location = new System.Drawing.Point(120, 23);
+            this.id.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.id.Name = "id";
             this.id.ReadOnly = true;
-            this.id.Size = new System.Drawing.Size(271, 26);
+            this.id.Size = new System.Drawing.Size(182, 20);
             this.id.TabIndex = 0;
             this.id.Visible = false;
             this.id.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
             // name
             // 
-            this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.name.Location = new System.Drawing.Point(291, 76);
+            this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.name.Location = new System.Drawing.Point(194, 49);
+            this.name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(360, 44);
+            this.name.Size = new System.Drawing.Size(241, 27);
             this.name.TabIndex = 1;
             this.name.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.name_MaskInputRejected);
             // 
             // birthday
             // 
             this.birthday.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.birthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.birthday.Location = new System.Drawing.Point(291, 126);
+            this.birthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.birthday.Location = new System.Drawing.Point(194, 82);
+            this.birthday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.birthday.Mask = "00/00/0000";
             this.birthday.Name = "birthday";
-            this.birthday.Size = new System.Drawing.Size(360, 44);
+            this.birthday.Size = new System.Drawing.Size(241, 27);
             this.birthday.TabIndex = 2;
             this.birthday.ValidatingType = typeof(System.DateTime);
             this.birthday.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.birthday_MaskInputRejected);
@@ -78,30 +81,33 @@
             // 
             // inn
             // 
-            this.inn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.inn.Location = new System.Drawing.Point(291, 176);
+            this.inn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.inn.Location = new System.Drawing.Point(194, 114);
+            this.inn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.inn.Mask = "000000000000";
             this.inn.Name = "inn";
-            this.inn.Size = new System.Drawing.Size(360, 44);
+            this.inn.Size = new System.Drawing.Size(241, 27);
             this.inn.TabIndex = 3;
             this.inn.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.inn_MaskInputRejected);
             // 
             // snils
             // 
-            this.snils.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.snils.Location = new System.Drawing.Point(291, 226);
+            this.snils.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.snils.Location = new System.Drawing.Point(194, 147);
+            this.snils.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.snils.Mask = "000-000-000 00";
             this.snils.Name = "snils";
-            this.snils.Size = new System.Drawing.Size(360, 44);
+            this.snils.Size = new System.Drawing.Size(241, 27);
             this.snils.TabIndex = 4;
             // 
             // name_label
             // 
             this.name_label.AutoSize = true;
-            this.name_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.name_label.Location = new System.Drawing.Point(183, 76);
+            this.name_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.name_label.Location = new System.Drawing.Point(141, 49);
+            this.name_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.name_label.Name = "name_label";
-            this.name_label.Size = new System.Drawing.Size(90, 37);
+            this.name_label.Size = new System.Drawing.Size(49, 20);
             this.name_label.TabIndex = 5;
             this.name_label.Text = "ФИО";
             this.name_label.Click += new System.EventHandler(this.label1_Click);
@@ -109,20 +115,22 @@
             // birthday_label
             // 
             this.birthday_label.AutoSize = true;
-            this.birthday_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.birthday_label.Location = new System.Drawing.Point(36, 128);
+            this.birthday_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.birthday_label.Location = new System.Drawing.Point(43, 83);
+            this.birthday_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.birthday_label.Name = "birthday_label";
-            this.birthday_label.Size = new System.Drawing.Size(237, 37);
+            this.birthday_label.Size = new System.Drawing.Size(141, 20);
             this.birthday_label.TabIndex = 6;
             this.birthday_label.Text = "Дата рождения";
             // 
             // inn_label
             // 
             this.inn_label.AutoSize = true;
-            this.inn_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.inn_label.Location = new System.Drawing.Point(177, 176);
+            this.inn_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.inn_label.Location = new System.Drawing.Point(137, 114);
+            this.inn_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.inn_label.Name = "inn_label";
-            this.inn_label.Size = new System.Drawing.Size(87, 37);
+            this.inn_label.Size = new System.Drawing.Size(46, 20);
             this.inn_label.TabIndex = 7;
             this.inn_label.Text = "ИНН";
             this.inn_label.Click += new System.EventHandler(this.label2_Click);
@@ -130,19 +138,21 @@
             // snils_label
             // 
             this.snils_label.AutoSize = true;
-            this.snils_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.snils_label.Location = new System.Drawing.Point(141, 233);
+            this.snils_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.snils_label.Location = new System.Drawing.Point(113, 151);
+            this.snils_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.snils_label.Name = "snils_label";
-            this.snils_label.Size = new System.Drawing.Size(132, 37);
+            this.snils_label.Size = new System.Drawing.Size(69, 20);
             this.snils_label.TabIndex = 8;
             this.snils_label.Text = "СНИЛС";
             // 
             // id_label
             // 
             this.id_label.AutoSize = true;
-            this.id_label.Location = new System.Drawing.Point(152, 40);
+            this.id_label.Location = new System.Drawing.Point(101, 26);
+            this.id_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.id_label.Name = "id_label";
-            this.id_label.Size = new System.Drawing.Size(21, 20);
+            this.id_label.Size = new System.Drawing.Size(15, 13);
             this.id_label.TabIndex = 9;
             this.id_label.Text = "id";
             this.id_label.Visible = false;
@@ -150,48 +160,48 @@
             // 
             // passport_series
             // 
-            this.passport_series.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.passport_series.Location = new System.Drawing.Point(291, 326);
+            this.passport_series.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passport_series.Location = new System.Drawing.Point(194, 212);
+            this.passport_series.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.passport_series.Name = "passport_series";
-            this.passport_series.Size = new System.Drawing.Size(360, 44);
+            this.passport_series.Size = new System.Drawing.Size(241, 27);
             this.passport_series.TabIndex = 10;
             this.passport_series.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.passport_series_MaskInputRejected);
             // 
             // passport_number
             // 
-            this.passport_number.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.passport_number.Location = new System.Drawing.Point(291, 276);
+            this.passport_number.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passport_number.Location = new System.Drawing.Point(194, 179);
+            this.passport_number.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.passport_number.Name = "passport_number";
-            this.passport_number.Size = new System.Drawing.Size(360, 44);
+            this.passport_number.Size = new System.Drawing.Size(241, 27);
             this.passport_number.TabIndex = 11;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label1.Location = new System.Drawing.Point(26, 283);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(36, 184);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 37);
+            this.label1.Size = new System.Drawing.Size(145, 20);
             this.label1.TabIndex = 12;
             this.label1.Text = "Серия паспорта";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label2.Location = new System.Drawing.Point(17, 333);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(31, 215);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(256, 37);
+            this.label2.Size = new System.Drawing.Size(148, 20);
             this.label2.TabIndex = 13;
             this.label2.Text = "Номер паспорта";
             // 
             // EmployeeEditForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 440);
+            this.ClientSize = new System.Drawing.Size(471, 286);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.passport_number);
@@ -207,6 +217,7 @@
             this.Controls.Add(this.name);
             this.Controls.Add(this.id);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "EmployeeEditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
