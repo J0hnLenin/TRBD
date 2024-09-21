@@ -73,6 +73,8 @@ namespace WindowsFormsApp1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -130,7 +132,6 @@ namespace WindowsFormsApp1
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -259,23 +260,31 @@ namespace WindowsFormsApp1
             // startdateDataGridViewTextBoxColumn
             // 
             this.startdateDataGridViewTextBoxColumn.DataPropertyName = "start_date";
+            this.startdateDataGridViewTextBoxColumn.FillWeight = 152.2843F;
             this.startdateDataGridViewTextBoxColumn.HeaderText = "Дата начала работ";
+            this.startdateDataGridViewTextBoxColumn.MinimumWidth = 150;
             this.startdateDataGridViewTextBoxColumn.Name = "startdateDataGridViewTextBoxColumn";
             this.startdateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.startdateDataGridViewTextBoxColumn.Width = 170;
             // 
             // finishdateDataGridViewTextBoxColumn
             // 
             this.finishdateDataGridViewTextBoxColumn.DataPropertyName = "finish_date";
+            this.finishdateDataGridViewTextBoxColumn.FillWeight = 73.85786F;
             this.finishdateDataGridViewTextBoxColumn.HeaderText = "Дата окончания работ";
+            this.finishdateDataGridViewTextBoxColumn.MinimumWidth = 170;
             this.finishdateDataGridViewTextBoxColumn.Name = "finishdateDataGridViewTextBoxColumn";
             this.finishdateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.finishdateDataGridViewTextBoxColumn.Width = 170;
             // 
             // descriptionDataGridViewTextBoxColumn
             // 
             this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
+            this.descriptionDataGridViewTextBoxColumn.FillWeight = 73.85786F;
             this.descriptionDataGridViewTextBoxColumn.HeaderText = "Описание";
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
             this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descriptionDataGridViewTextBoxColumn.Width = 355;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -283,6 +292,7 @@ namespace WindowsFormsApp1
             this.idDataGridViewTextBoxColumn.HeaderText = "id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.idDataGridViewTextBoxColumn.Visible = false;
             // 
             // nameDataGridViewTextBoxColumn
@@ -299,6 +309,7 @@ namespace WindowsFormsApp1
             this.birthdayDataGridViewTextBoxColumn.DataPropertyName = "birthday";
             this.birthdayDataGridViewTextBoxColumn.FillWeight = 87.77627F;
             this.birthdayDataGridViewTextBoxColumn.HeaderText = "Дата рождения";
+            this.birthdayDataGridViewTextBoxColumn.MinimumWidth = 100;
             this.birthdayDataGridViewTextBoxColumn.Name = "birthdayDataGridViewTextBoxColumn";
             this.birthdayDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -311,8 +322,10 @@ namespace WindowsFormsApp1
             this.innDataGridViewTextBoxColumn.FillWeight = 112.3432F;
             this.innDataGridViewTextBoxColumn.HeaderText = "ИНН";
             this.innDataGridViewTextBoxColumn.MaxInputLength = 12;
+            this.innDataGridViewTextBoxColumn.MinimumWidth = 120;
             this.innDataGridViewTextBoxColumn.Name = "innDataGridViewTextBoxColumn";
             this.innDataGridViewTextBoxColumn.ReadOnly = true;
+            this.innDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // snilsDataGridViewTextBoxColumn
             // 
@@ -320,8 +333,10 @@ namespace WindowsFormsApp1
             this.snilsDataGridViewTextBoxColumn.FillWeight = 106.5377F;
             this.snilsDataGridViewTextBoxColumn.HeaderText = "СНИЛС";
             this.snilsDataGridViewTextBoxColumn.MaxInputLength = 14;
+            this.snilsDataGridViewTextBoxColumn.MinimumWidth = 130;
             this.snilsDataGridViewTextBoxColumn.Name = "snilsDataGridViewTextBoxColumn";
             this.snilsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.snilsDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // passport_series
             // 
@@ -331,6 +346,7 @@ namespace WindowsFormsApp1
             this.passport_series.MaxInputLength = 20;
             this.passport_series.Name = "passport_series";
             this.passport_series.ReadOnly = true;
+            this.passport_series.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // passport_number
             // 
@@ -340,11 +356,12 @@ namespace WindowsFormsApp1
             this.passport_number.MaxInputLength = 20;
             this.passport_number.Name = "passport_number";
             this.passport_number.ReadOnly = true;
+            this.passport_number.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1134, 564);
+            this.ClientSize = new System.Drawing.Size(1034, 564);
             this.Controls.Add(this.DeleteJobButton);
             this.Controls.Add(this.EditJobButton);
             this.Controls.Add(this.NewJobButton);
@@ -358,6 +375,7 @@ namespace WindowsFormsApp1
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Приложение";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
@@ -377,7 +395,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.BindingSource jobBindingSource;
         private BindingSource employeeBindingSource1;
-        private DataGridViewTextBoxColumn passportDataGridViewTextBoxColumn;
         private Button NewEmploeeButton;
         private Button EditEmploeeButton;
         private Button DeleteEmploeeButton;

@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
     {
         Int64 editId;
         private DataSet1 dataSet1;
+        public Int64 NewId;
         bool newEmployee;
 
         public EmployeeEditForm(DataSet1 dataSet1, bool newEmployee, Int64 editId=0)
@@ -23,7 +24,6 @@ namespace WindowsFormsApp1
             this.editId = editId;
             this.dataSet1 = dataSet1;
             this.newEmployee = newEmployee;
-            id.Text = editId.ToString();
 
             if (!newEmployee)
             {
@@ -100,6 +100,7 @@ namespace WindowsFormsApp1
             {
                 if (!DateTime.TryParseExact(DateValue, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateFormated))
                 {
+                    birthday.Text = "  .  .";
                     MessageBox.Show("Неверно введена дата. Вводите дату в формате день.месяц.год");
                     e.Cancel = true;
                 }
@@ -124,7 +125,11 @@ namespace WindowsFormsApp1
                 newRow["passport_number"] = passport_number.Text;
                 
                 dataSet1.Employee.Rows.Add(newRow);
-            
+
+                dataSet1.Employee.AcceptChanges();
+                NewId = Convert.ToInt64(newRow["id"].ToString());
+
+
             }
             else
             {
@@ -133,19 +138,30 @@ namespace WindowsFormsApp1
                 if (rows.Length > 0)
                 {
                     rows[0]["name"] = name.Text;
-                    rows[0]["birthday"] = birthday.Text;
+                    if(birthday.Text != "  .  .")
+                    {
+                        rows[0]["birthday"] = birthday.Text;
+                    }
                     rows[0]["inn"] = inn.Text;
                     rows[0]["snils"] = snils.Text;
                     rows[0]["passport_series"] = passport_series.Text;
                     rows[0]["passport_number"] = passport_number.Text;
+
+                    dataSet1.Employee.AcceptChanges();
+                    NewId = editId;
                 }
+
             }
         }
 
         private void EmployeeEditForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             SaveEmployee();
-            dataSet1.Employee.AcceptChanges();
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

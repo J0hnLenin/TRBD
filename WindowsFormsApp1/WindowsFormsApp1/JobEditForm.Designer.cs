@@ -87,7 +87,6 @@
             this.description.Name = "description";
             this.description.Size = new System.Drawing.Size(285, 27);
             this.description.TabIndex = 4;
-            this.description.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label_start_date
             // 

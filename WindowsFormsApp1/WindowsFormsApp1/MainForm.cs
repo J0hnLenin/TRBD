@@ -31,9 +31,35 @@ namespace WindowsFormsApp1
             dataGridView2.Scroll += new ScrollEventHandler(dataGridView2_Scroll);
 
             LoadFromXML();
-
+            dataGridView1.Sort(dataGridView1.Columns[1], System.ComponentModel.ListSortDirection.Ascending);
         }
 
+        private void SelectRow(DataGridView dataGrid, int bIndex)
+        {
+            if (bIndex >= 0 && bIndex < dataGrid.Rows.Count)
+            {
+                dataGrid.CurrentCell = dataGrid.Rows[bIndex].Cells[2];
+                dataGrid.Rows[bIndex].Selected = true;
+                dataGrid.FirstDisplayedScrollingRowIndex = bIndex;
+            }
+        }
+
+        private void SelectRowId(DataGridView dataGrid, Int64 id)
+        {
+            foreach (DataGridViewRow row in dataGrid.Rows)
+            {
+                if (row.Cells[0].Value != null &&
+                    Convert.ToInt32(row.Cells[0].Value) == id)
+                {
+
+                    dataGrid.CurrentCell = row.Cells[2];
+                    row.Selected = true;
+                    dataGrid.FirstDisplayedScrollingRowIndex = row.Index;
+                    return;
+                }
+            }
+
+        }
         private void dataGridView1_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
 
@@ -41,10 +67,7 @@ namespace WindowsFormsApp1
 
         private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            dataSet1.Employee.AcceptChanges();
-            dataGridView1.Update();
 
-            SaveToXML();
         }
 
         private void dataGridView1_Scroll(object sender, ScrollEventArgs e)
@@ -69,6 +92,8 @@ namespace WindowsFormsApp1
 
         private void SaveToXML()
         {
+            dataSet1.Employee.AcceptChanges();
+            dataSet1.Job.AcceptChanges();
             string filePath = "Data.xml";
             dataSet1.WriteXml(filePath);
         }
@@ -87,10 +112,7 @@ namespace WindowsFormsApp1
 
         private void dataGridView2_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            dataSet1.Job.AcceptChanges();
-            dataGridView2.Update();
 
-            SaveToXML();
         }
 
         private void dataGridView2_Scroll(object sender, ScrollEventArgs e)
@@ -122,53 +144,80 @@ namespace WindowsFormsApp1
         {
             EmployeeEditForm editForm = new EmployeeEditForm(dataSet1, true);
             editForm.ShowDialog();
+            SaveToXML();
+
+            SelectRowId(dataGridView1, editForm.NewId);
         }
 
         private void EditEmploeeButton_Click(object sender, EventArgs e)
         {
-            long editId = Convert.ToInt64(dataGridView1.CurrentRow.Cells[0].Value);
-            EmployeeEditForm editForm = new EmployeeEditForm(dataSet1, false, editId);
-            editForm.ShowDialog();
+            if (dataGridView1.CurrentRow != null)
+            {
+                long editId = Convert.ToInt64(dataGridView1.CurrentRow.Cells[0].Value);
+                EmployeeEditForm editForm = new EmployeeEditForm(dataSet1, false, editId);
+                editForm.ShowDialog();
+                SaveToXML();
+            }
         }
 
         private void DeleteEmploeeButton_Click(object sender, EventArgs e)
         {
-            Int64 rowId = Convert.ToInt64(dataGridView1.CurrentRow.Cells[0].Value);
-            DataRow[] rows = dataSet1.Job.Select($"employee_id = {rowId}");
+            if (dataGridView1.CurrentRow != null)
+            {
+                Int64 rowId = Convert.ToInt64(dataGridView1.CurrentRow.Cells[0].Value);
+                DataRow[] rows = dataSet1.Job.Select($"employee_id = {rowId}");
 
-            if (rows.Length == 0)
-            {
-                int rowIndex = dataGridView1.CurrentRow.Index;
-                dataSet1.Employee.Rows.RemoveAt(rowIndex);
-            }
-            else
-            {
-                MessageBox.Show("Нельзя удались работника у которого имеются работы");
+                if (rows.Length == 0)
+                {
+                    dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
+                    SaveToXML();
+                    SelectRow(dataGridView1, 0);
+                }
+                else
+                {
+                    MessageBox.Show("Нельзя удались работника у которого имеются работы");
+                }
             }
         }
 
         private void NewJobButton_Click(object sender, EventArgs e)
         {
+            if(dataGridView1.CurrentRow != null)
+            {
+                long parrentId = Convert.ToInt64(dataGridView1.CurrentRow.Cells[0].Value);
+                JobEditForm editForm = new JobEditForm(dataSet1, true, parrentId);
+                editForm.ShowDialog();
+                SaveToXML();
 
-            long parrentId = Convert.ToInt64(dataGridView1.CurrentRow.Cells[0].Value);
-            long editId = Convert.ToInt64(dataGridView2.CurrentRow.Cells[0].Value);
-            JobEditForm editForm = new JobEditForm(dataSet1, true, parrentId);
-            editForm.ShowDialog();
+                SelectRowId(dataGridView2, editForm.NewId);
+            }
         }
 
         private void EditJobButton_Click(object sender, EventArgs e)
         {
-
-            long parrentId = Convert.ToInt64(dataGridView1.CurrentRow.Cells[0].Value);
-            long editId = Convert.ToInt64(dataGridView2.CurrentRow.Cells[0].Value);
-            JobEditForm editForm = new JobEditForm(dataSet1, false, parrentId, editId);
-            editForm.ShowDialog();
+            if ((dataGridView2.CurrentRow != null) && (dataGridView1.CurrentRow != null))
+            {
+                long parrentId = Convert.ToInt64(dataGridView1.CurrentRow.Cells[0].Value);
+                long editId = Convert.ToInt64(dataGridView2.CurrentRow.Cells[0].Value);
+                JobEditForm editForm = new JobEditForm(dataSet1, false, parrentId, editId);
+                editForm.ShowDialog();
+                SaveToXML();
+            }
         }
 
         private void DeleteJobButton_Click(object sender, EventArgs e)
         {
-            int rowIndex = dataGridView2.CurrentRow.Index;
-            dataSet1.Job.Rows.RemoveAt(rowIndex);
+            if(dataGridView2.CurrentRow != null)
+            {
+                dataGridView2.Rows.Remove(dataGridView2.CurrentRow);
+                SaveToXML();
+                SelectRow(dataGridView2, 0);
+            }
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SaveToXML();
         }
     }
 }

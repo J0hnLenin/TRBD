@@ -540,7 +540,6 @@ namespace WindowsFormsApp1 {
                 this.columnid.AutoIncrementSeed = 1;
                 this.columnid.AllowDBNull = false;
                 this.columnid.Unique = true;
-                this.columnname.AllowDBNull = false;
                 this.columnname.MaxLength = 100;
                 this.columninn.MaxLength = 12;
                 this.columnsnils.MaxLength = 14;
@@ -866,7 +865,6 @@ namespace WindowsFormsApp1 {
                 this.columnid.AllowDBNull = false;
                 this.columnid.Unique = true;
                 this.columnemployee_id.AllowDBNull = false;
-                this.columnstart_date.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1022,7 +1020,12 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string name {
                 get {
-                    return ((string)(this[this.tableEmployee.nameColumn]));
+                    try {
+                        return ((string)(this[this.tableEmployee.nameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'name\' в таблице \'Employee\' равно DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableEmployee.nameColumn] = value;
@@ -1107,6 +1110,18 @@ namespace WindowsFormsApp1 {
                 set {
                     this[this.tableEmployee.passport_numberColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsnameNull() {
+                return this.IsNull(this.tableEmployee.nameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetnameNull() {
+                this[this.tableEmployee.nameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1221,7 +1236,12 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public System.DateTime start_date {
                 get {
-                    return ((global::System.DateTime)(this[this.tableJob.start_dateColumn]));
+                    try {
+                        return ((global::System.DateTime)(this[this.tableJob.start_dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'start_date\' в таблице \'Job\' равно DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableJob.start_dateColumn] = value;
@@ -1269,6 +1289,18 @@ namespace WindowsFormsApp1 {
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Employee_Job"]);
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isstart_dateNull() {
+                return this.IsNull(this.tableJob.start_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setstart_dateNull() {
+                this[this.tableJob.start_dateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

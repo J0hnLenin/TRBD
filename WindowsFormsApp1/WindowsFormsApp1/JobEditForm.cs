@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,7 @@ namespace WindowsFormsApp1
         Int64 editId;
         private DataSet1 dataSet1;
         bool newJob;
+        public Int64 NewId;
         Int64 parrentId;
 
         public JobEditForm(DataSet1 dataSet1, bool newJob, Int64 parrentId, Int64 editId = 0)
@@ -90,6 +92,8 @@ namespace WindowsFormsApp1
                 newRow["employee_id"] = parrentId;
                 dataSet1.Job.Rows.Add(newRow);
 
+                dataSet1.Job.AcceptChanges();
+                NewId = Convert.ToInt64(newRow["id"].ToString());
             }
             else
             {
@@ -107,14 +111,17 @@ namespace WindowsFormsApp1
                     }
                     rows[0]["description"] = description.Text;
 
+                    dataSet1.Job.AcceptChanges();
+                    NewId = editId;
                 }
+
             }
         }
 
         private void JobEditForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             SaveJob();
-            dataSet1.Job.AcceptChanges();
+            
         }
 
         private void start_date_Validating(object sender, CancelEventArgs e)
@@ -128,6 +135,7 @@ namespace WindowsFormsApp1
             {
                 if (!DateTime.TryParseExact(DateValue, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out startDate))
                 {
+                    start_date.Text = "  .  .";
                     MessageBox.Show("Неверно введена дата. Вводите дату в формате день.месяц.год");
                     e.Cancel = true;
                 }
@@ -138,7 +146,8 @@ namespace WindowsFormsApp1
                     {
                         if (finishDate < startDate)
                         {
-                            MessageBox.Show("Неверно введена дата. Дата начала не может быть раньше даты окончания");
+                            start_date.Text = "  .  .";
+                            MessageBox.Show("Неверно введена дата. Дата начала не может быть позже даты окончания");
                             e.Cancel = true;
                         }
                     }
@@ -150,15 +159,30 @@ namespace WindowsFormsApp1
         private void finish_date_Validating(object sender, CancelEventArgs e)
         {
             string DateValue;
-            DateTime DateFormated;
+            DateTime startDate;
+            DateTime finishDate;
 
             DateValue = finish_date.Text;
             if (DateValue != "  .  .")
             {
-                if (!DateTime.TryParseExact(DateValue, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateFormated))
+                if (!DateTime.TryParseExact(DateValue, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out finishDate))
                 {
+                    finish_date.Text = "  .  .";
                     MessageBox.Show("Неверно введена дата. Вводите дату в формате день.месяц.год");
                     e.Cancel = true;
+                }
+
+                if (start_date.Text != "  .  .")
+                {
+                    if (DateTime.TryParse(finish_date.Text, out startDate))
+                    {
+                        if (finishDate < startDate)
+                        {
+                            finish_date.Text = "  .  .";
+                            MessageBox.Show("Неверно введена дата. Дата окончания не может быть раньше даты начала");
+                            e.Cancel = true;
+                        }
+                    }
                 }
             }
         }
