@@ -120,8 +120,7 @@ namespace WindowsFormsApp1
 
         private void JobEditForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            SaveJob();
-            
+
         }
 
         private void start_date_Validating(object sender, CancelEventArgs e)
@@ -136,7 +135,10 @@ namespace WindowsFormsApp1
                 if (!DateTime.TryParseExact(DateValue, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out startDate))
                 {
                     start_date.Text = "  .  .";
-                    MessageBox.Show("Неверно введена дата. Вводите дату в формате день.месяц.год");
+                    CustomMessageBox box = new CustomMessageBox("        Неверно введена дата.\n" +
+                                                                "      Вводите дату в формате\n" +
+                                                                "              день.месяц.год");
+                    box.ShowDialog();
                     e.Cancel = true;
                 }
 
@@ -147,7 +149,10 @@ namespace WindowsFormsApp1
                         if (finishDate < startDate)
                         {
                             start_date.Text = "  .  .";
-                            MessageBox.Show("Неверно введена дата. Дата начала не может быть позже даты окончания");
+                            CustomMessageBox box = new CustomMessageBox("        Неверно введена дата.\n" +
+                                                                        "     Дата начала не может быть\n" +
+                                                                        "        позже даты окончания.");
+                            box.ShowDialog();
                             e.Cancel = true;
                         }
                     }
@@ -168,23 +173,40 @@ namespace WindowsFormsApp1
                 if (!DateTime.TryParseExact(DateValue, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out finishDate))
                 {
                     finish_date.Text = "  .  .";
-                    MessageBox.Show("Неверно введена дата. Вводите дату в формате день.месяц.год");
+                    CustomMessageBox box = new CustomMessageBox("        Неверно введена дата.\n" +
+                                                                "      Вводите дату в формате\n" +
+                                                                "              день.месяц.год");
+                    box.ShowDialog();
                     e.Cancel = true;
                 }
 
                 if (start_date.Text != "  .  .")
                 {
-                    if (DateTime.TryParse(finish_date.Text, out startDate))
+                    if (DateTime.TryParse(start_date.Text, out startDate))
                     {
                         if (finishDate < startDate)
                         {
                             finish_date.Text = "  .  .";
-                            MessageBox.Show("Неверно введена дата. Дата окончания не может быть раньше даты начала");
+                            CustomMessageBox box = new CustomMessageBox("        Неверно введена дата.\n" +
+                                                                        "     Дата начала не может быть\n" +
+                                                                        "        позже даты окончания.");
+                            box.ShowDialog();
                             e.Cancel = true;
                         }
                     }
                 }
             }
+        }
+
+        private void canselButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            SaveJob();
+            this.Close();
         }
     }
 }

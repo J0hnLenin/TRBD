@@ -40,12 +40,14 @@
             this.passport_number = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.canselButton = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // name
             // 
             this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.name.Location = new System.Drawing.Point(194, 46);
+            this.name.Location = new System.Drawing.Point(197, 11);
             this.name.Margin = new System.Windows.Forms.Padding(2);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(241, 27);
@@ -56,7 +58,7 @@
             // 
             this.birthday.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.birthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.birthday.Location = new System.Drawing.Point(194, 80);
+            this.birthday.Location = new System.Drawing.Point(197, 45);
             this.birthday.Margin = new System.Windows.Forms.Padding(2);
             this.birthday.Mask = "00/00/0000";
             this.birthday.Name = "birthday";
@@ -69,7 +71,7 @@
             // inn
             // 
             this.inn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.inn.Location = new System.Drawing.Point(194, 111);
+            this.inn.Location = new System.Drawing.Point(197, 76);
             this.inn.Margin = new System.Windows.Forms.Padding(2);
             this.inn.Mask = "000000000000";
             this.inn.Name = "inn";
@@ -80,7 +82,7 @@
             // snils
             // 
             this.snils.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.snils.Location = new System.Drawing.Point(194, 144);
+            this.snils.Location = new System.Drawing.Point(197, 109);
             this.snils.Margin = new System.Windows.Forms.Padding(2);
             this.snils.Mask = "000-000-000 00";
             this.snils.Name = "snils";
@@ -91,7 +93,7 @@
             // 
             this.name_label.AutoSize = true;
             this.name_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.name_label.Location = new System.Drawing.Point(141, 53);
+            this.name_label.Location = new System.Drawing.Point(144, 14);
             this.name_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.name_label.Name = "name_label";
             this.name_label.Size = new System.Drawing.Size(49, 20);
@@ -103,7 +105,7 @@
             // 
             this.birthday_label.AutoSize = true;
             this.birthday_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.birthday_label.Location = new System.Drawing.Point(49, 82);
+            this.birthday_label.Location = new System.Drawing.Point(52, 47);
             this.birthday_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.birthday_label.Name = "birthday_label";
             this.birthday_label.Size = new System.Drawing.Size(141, 20);
@@ -114,7 +116,7 @@
             // 
             this.inn_label.AutoSize = true;
             this.inn_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.inn_label.Location = new System.Drawing.Point(144, 114);
+            this.inn_label.Location = new System.Drawing.Point(147, 79);
             this.inn_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.inn_label.Name = "inn_label";
             this.inn_label.Size = new System.Drawing.Size(46, 20);
@@ -126,7 +128,7 @@
             // 
             this.snils_label.AutoSize = true;
             this.snils_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.snils_label.Location = new System.Drawing.Point(121, 147);
+            this.snils_label.Location = new System.Drawing.Point(124, 112);
             this.snils_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.snils_label.Name = "snils_label";
             this.snils_label.Size = new System.Drawing.Size(69, 20);
@@ -136,7 +138,7 @@
             // passport_series
             // 
             this.passport_series.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.passport_series.Location = new System.Drawing.Point(194, 177);
+            this.passport_series.Location = new System.Drawing.Point(197, 142);
             this.passport_series.Margin = new System.Windows.Forms.Padding(2);
             this.passport_series.Name = "passport_series";
             this.passport_series.Size = new System.Drawing.Size(241, 27);
@@ -146,7 +148,7 @@
             // passport_number
             // 
             this.passport_number.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.passport_number.Location = new System.Drawing.Point(194, 212);
+            this.passport_number.Location = new System.Drawing.Point(197, 177);
             this.passport_number.Margin = new System.Windows.Forms.Padding(2);
             this.passport_number.Name = "passport_number";
             this.passport_number.Size = new System.Drawing.Size(241, 27);
@@ -156,7 +158,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(44, 180);
+            this.label1.Location = new System.Drawing.Point(47, 145);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(145, 20);
             this.label1.TabIndex = 12;
@@ -167,17 +169,41 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(41, 215);
+            this.label2.Location = new System.Drawing.Point(44, 180);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(148, 20);
             this.label2.TabIndex = 13;
             this.label2.Text = "Номер паспорта";
             // 
+            // canselButton
+            // 
+            this.canselButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.canselButton.Location = new System.Drawing.Point(96, 226);
+            this.canselButton.Name = "canselButton";
+            this.canselButton.Size = new System.Drawing.Size(136, 52);
+            this.canselButton.TabIndex = 14;
+            this.canselButton.Text = "Отменить изменения";
+            this.canselButton.UseVisualStyleBackColor = true;
+            this.canselButton.Click += new System.EventHandler(this.canselButton_Click);
+            // 
+            // saveButton
+            // 
+            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.saveButton.Location = new System.Drawing.Point(238, 226);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(136, 52);
+            this.saveButton.TabIndex = 15;
+            this.saveButton.Text = "Сохранить изменения";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            // 
             // EmployeeEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(471, 286);
+            this.ClientSize = new System.Drawing.Size(471, 295);
+            this.Controls.Add(this.saveButton);
+            this.Controls.Add(this.canselButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.passport_number);
@@ -216,5 +242,7 @@
         private System.Windows.Forms.MaskedTextBox passport_number;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button canselButton;
+        private System.Windows.Forms.Button saveButton;
     }
 }

@@ -101,7 +101,10 @@ namespace WindowsFormsApp1
                 if (!DateTime.TryParseExact(DateValue, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateFormated))
                 {
                     birthday.Text = "  .  .";
-                    MessageBox.Show("Неверно введена дата. Вводите дату в формате день.месяц.год");
+                    CustomMessageBox box = new CustomMessageBox("        Неверно введена дата.\n" +
+                                                                "      Вводите дату в формате\n" +
+                                                                "              день.месяц.год");
+                    box.ShowDialog();
                     e.Cancel = true;
                 }
             }
@@ -156,12 +159,23 @@ namespace WindowsFormsApp1
 
         private void EmployeeEditForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            SaveEmployee();
+
         }
 
         private void label1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void canselButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            SaveEmployee();
+            this.Close();
         }
     }
 }

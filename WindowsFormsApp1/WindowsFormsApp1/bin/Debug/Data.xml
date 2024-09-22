@@ -4,9 +4,9 @@
     <id>10</id>
     <name>Андрей Жилин</name>
     <birthday>2004-07-24T00:00:00+06:00</birthday>
-    <inn>796762374529</inn>
+    <inn>234523452345</inn>
     <snils>346-912-786 49</snils>
-    <passport_series>9723</passport_series>
+    <passport_series>3453</passport_series>
     <passport_number>637267</passport_number>
   </Employee>
   <Employee>
@@ -15,7 +15,7 @@
     <birthday>2003-02-02T00:00:00+05:00</birthday>
     <inn>126387698776</inn>
     <snils>976-482-364 98</snils>
-    <passport_series>8979</passport_series>
+    <passport_series>UKI21</passport_series>
     <passport_number>768796</passport_number>
   </Employee>
   <Employee>
@@ -55,13 +55,6 @@
     <passport_number>79821232</passport_number>
   </Employee>
   <Job>
-    <id>1</id>
-    <employee_id>13</employee_id>
-    <start_date>2023-01-01T00:00:00+05:00</start_date>
-    <finish_date>2023-01-01T00:00:00+05:00</finish_date>
-    <description>Настроил коммутатор</description>
-  </Job>
-  <Job>
     <id>2</id>
     <employee_id>13</employee_id>
     <start_date>2023-12-02T00:00:00+05:00</start_date>
@@ -69,10 +62,59 @@
     <description>Настроила маршрутизатор</description>
   </Job>
   <Job>
-    <id>6</id>
+    <id>7</id>
     <employee_id>12</employee_id>
-    <start_date>2020-01-01T00:00:00+05:00</start_date>
-    <finish_date>2020-02-01T00:00:00+05:00</finish_date>
-    <description>Вкрутил лампочку</description>
+    <start_date>2024-09-10T00:00:00+05:00</start_date>
+    <finish_date>2024-09-22T00:00:00+05:00</finish_date>
+    <description>Создал базу данных</description>
+  </Job>
+  <Job>
+    <id>8</id>
+    <employee_id>12</employee_id>
+    <start_date>2024-03-15T00:00:00+05:00</start_date>
+    <finish_date>2024-03-20T00:00:00+05:00</finish_date>
+    <description>Отремонтировал радиоприёмник</description>
+  </Job>
+  <Job>
+    <id>11</id>
+    <employee_id>10</employee_id>
+    <start_date>2023-10-10T00:00:00+05:00</start_date>
+    <finish_date>2024-01-01T00:00:00+05:00</finish_date>
+    <description>Разработал приложение</description>
+  </Job>
+  <Job>
+    <id>12</id>
+    <employee_id>13</employee_id>
+    <start_date>2024-04-01T00:00:00+05:00</start_date>
+    <finish_date>2025-05-01T00:00:00+05:00</finish_date>
+    <description>Настроила 2 коммутатора</description>
+  </Job>
+  <Job>
+    <id>13</id>
+    <employee_id>14</employee_id>
+    <start_date>2025-10-20T00:00:00+05:00</start_date>
+    <finish_date>2025-10-21T00:00:00+05:00</finish_date>
+    <description>Установил debian</description>
+  </Job>
+  <Job>
+    <id>14</id>
+    <employee_id>11</employee_id>
+    <start_date>2024-01-02T00:00:00+05:00</start_date>
+    <finish_date>2024-01-02T00:00:00+05:00</finish_date>
+    <description>Разгрузил партию товара</description>
+  </Job>
+  <Job>
+    <id>15</id>
+    <employee_id>15</employee_id>
+    <start_date>2023-01-01T00:00:00+05:00</start_date>
+    <finish_date>2024-10-13T00:00:00+05:00</finish_date>
+    <description>Произвёл проверку безопасности системы</description>
+  </Job>
+  <Job>
+    <id>16</id>
+    <employee_id>10</employee_id>
+    <start_date>2019-03-14T00:00:00+05:00</start_date>
+    <finish_date>2019-03-15T00:00:00+05:00</finish_date>
+    <description>Установил антивирус</description>
   </Job>
 </DataSet1>

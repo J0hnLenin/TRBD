@@ -175,7 +175,9 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
-                    MessageBox.Show("Нельзя удались работника у которого имеются работы");
+                    CustomMessageBox box = new CustomMessageBox("\n     Нельзя удались работника\n" +
+                                                                "    у которого имеются работы");
+                    box.ShowDialog();
                 }
             }
         }

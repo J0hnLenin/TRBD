@@ -56,3 +56,4 @@ C:\Users\Andrey\Documents\GitHub\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debu
 C:\Users\Andrey\Documents\GitHub\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 C:\Users\Andrey\Documents\GitHub\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\Andrey\Documents\GitHub\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+E:\Git\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.CustomMessageBox.resources
