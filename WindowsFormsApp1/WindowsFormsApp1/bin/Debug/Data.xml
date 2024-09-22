@@ -59,42 +59,42 @@
     <employee_id>13</employee_id>
     <start_date>2023-12-02T00:00:00+05:00</start_date>
     <finish_date>2024-12-03T00:00:00+05:00</finish_date>
-    <description>Настроила маршрутизатор</description>
+    <description>Разобрала мебель</description>
   </Job>
   <Job>
     <id>7</id>
     <employee_id>12</employee_id>
     <start_date>2024-09-10T00:00:00+05:00</start_date>
     <finish_date>2024-09-22T00:00:00+05:00</finish_date>
-    <description>Создал базу данных</description>
+    <description>Провёл шпаклёвку стен</description>
   </Job>
   <Job>
     <id>8</id>
     <employee_id>12</employee_id>
     <start_date>2024-03-15T00:00:00+05:00</start_date>
     <finish_date>2024-03-20T00:00:00+05:00</finish_date>
-    <description>Отремонтировал радиоприёмник</description>
+    <description>Закупил оборудование</description>
   </Job>
   <Job>
     <id>11</id>
     <employee_id>10</employee_id>
     <start_date>2023-10-10T00:00:00+05:00</start_date>
     <finish_date>2024-01-01T00:00:00+05:00</finish_date>
-    <description>Разработал приложение</description>
+    <description>Уложил плитку</description>
   </Job>
   <Job>
     <id>12</id>
     <employee_id>13</employee_id>
     <start_date>2024-04-01T00:00:00+05:00</start_date>
     <finish_date>2025-05-01T00:00:00+05:00</finish_date>
-    <description>Настроила 2 коммутатора</description>
+    <description>Собрала мебель</description>
   </Job>
   <Job>
     <id>13</id>
     <employee_id>14</employee_id>
     <start_date>2025-10-20T00:00:00+05:00</start_date>
     <finish_date>2025-10-21T00:00:00+05:00</finish_date>
-    <description>Установил debian</description>
+    <description>Установил осветительные приборы</description>
   </Job>
   <Job>
     <id>14</id>
@@ -108,13 +108,20 @@
     <employee_id>15</employee_id>
     <start_date>2023-01-01T00:00:00+05:00</start_date>
     <finish_date>2024-10-13T00:00:00+05:00</finish_date>
-    <description>Произвёл проверку безопасности системы</description>
+    <description>Произвёл проверку пожарной безопасности</description>
   </Job>
   <Job>
     <id>16</id>
     <employee_id>10</employee_id>
     <start_date>2019-03-14T00:00:00+05:00</start_date>
     <finish_date>2019-03-15T00:00:00+05:00</finish_date>
-    <description>Установил антивирус</description>
+    <description>Залил фундамент</description>
+  </Job>
+  <Job>
+    <id>17</id>
+    <employee_id>10</employee_id>
+    <start_date>2024-09-21T00:00:00+05:00</start_date>
+    <finish_date>2024-09-22T00:00:00+05:00</finish_date>
+    <description>Выполнил лакокрасочные работы</description>
   </Job>
 </DataSet1>
