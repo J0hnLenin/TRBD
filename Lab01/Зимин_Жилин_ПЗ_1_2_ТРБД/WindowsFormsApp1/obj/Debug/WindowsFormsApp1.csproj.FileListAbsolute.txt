@@ -57,3 +57,16 @@ C:\Users\Andrey\Documents\GitHub\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debu
 C:\Users\Andrey\Documents\GitHub\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\Andrey\Documents\GitHub\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 E:\Git\TRBD\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.CustomMessageBox.resources
+E:\Git\TRBD\Lab01\Зимин_Жилин_ПЗ_1_2_ТРБД\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+E:\Git\TRBD\Lab01\Зимин_Жилин_ПЗ_1_2_ТРБД\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+E:\Git\TRBD\Lab01\Зимин_Жилин_ПЗ_1_2_ТРБД\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+E:\Git\TRBD\Lab01\Зимин_Жилин_ПЗ_1_2_ТРБД\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+E:\Git\TRBD\Lab01\Зимин_Жилин_ПЗ_1_2_ТРБД\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.CustomMessageBox.resources
+E:\Git\TRBD\Lab01\Зимин_Жилин_ПЗ_1_2_ТРБД\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.EmployeeEditForm.resources
+E:\Git\TRBD\Lab01\Зимин_Жилин_ПЗ_1_2_ТРБД\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainForm.resources
+E:\Git\TRBD\Lab01\Зимин_Жилин_ПЗ_1_2_ТРБД\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.JobEditForm.resources
+E:\Git\TRBD\Lab01\Зимин_Жилин_ПЗ_1_2_ТРБД\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+E:\Git\TRBD\Lab01\Зимин_Жилин_ПЗ_1_2_ТРБД\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+E:\Git\TRBD\Lab01\Зимин_Жилин_ПЗ_1_2_ТРБД\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+E:\Git\TRBD\Lab01\Зимин_Жилин_ПЗ_1_2_ТРБД\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+E:\Git\TRBD\Lab01\Зимин_Жилин_ПЗ_1_2_ТРБД\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
