@@ -1,0 +1,10 @@
+C:\Git\TRBD\SQL_Lite\bin\Debug\SQL_Lite.exe.config
+C:\Git\TRBD\SQL_Lite\bin\Debug\SQL_Lite.exe
+C:\Git\TRBD\SQL_Lite\bin\Debug\SQL_Lite.pdb
+C:\Git\TRBD\SQL_Lite\obj\Debug\SQL_Lite.csproj.AssemblyReference.cache
+C:\Git\TRBD\SQL_Lite\obj\Debug\SQL_Lite.Main.resources
+C:\Git\TRBD\SQL_Lite\obj\Debug\SQL_Lite.Properties.Resources.resources
+C:\Git\TRBD\SQL_Lite\obj\Debug\SQL_Lite.csproj.GenerateResource.cache
+C:\Git\TRBD\SQL_Lite\obj\Debug\SQL_Lite.csproj.CoreCompileInputs.cache
+C:\Git\TRBD\SQL_Lite\obj\Debug\SQL_Lite.exe
+C:\Git\TRBD\SQL_Lite\obj\Debug\SQL_Lite.pdb
