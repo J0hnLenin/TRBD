@@ -1,0 +1,127 @@
+<?xml version="1.0" standalone="yes"?>
+<DataSet1 xmlns="http://tempuri.org/DataSet1.xsd">
+  <Employee>
+    <id>10</id>
+    <name>Андрей Жилин</name>
+    <birthday>2004-07-24T00:00:00+06:00</birthday>
+    <inn>234523452345</inn>
+    <snils>346-912-786 49</snils>
+    <passport_series>3453</passport_series>
+    <passport_number>637267</passport_number>
+  </Employee>
+  <Employee>
+    <id>11</id>
+    <name>Артеев Артём</name>
+    <birthday>2003-02-02T00:00:00+05:00</birthday>
+    <inn>126387698776</inn>
+    <snils>976-482-364 98</snils>
+    <passport_series>UKI21</passport_series>
+    <passport_number>768796</passport_number>
+  </Employee>
+  <Employee>
+    <id>12</id>
+    <name>Андрей Зимин</name>
+    <birthday>2004-07-21T00:00:00+06:00</birthday>
+    <inn>738745123654</inn>
+    <snils>536-482-482 83</snils>
+    <passport_series>7678</passport_series>
+    <passport_number>769873</passport_number>
+  </Employee>
+  <Employee>
+    <id>13</id>
+    <name>Татьяна Лобова</name>
+    <birthday>2004-01-02T00:00:00+05:00</birthday>
+    <inn>346287348269</inn>
+    <snils>673-694-872 69</snils>
+    <passport_series>8732</passport_series>
+    <passport_number>782728</passport_number>
+  </Employee>
+  <Employee>
+    <id>14</id>
+    <name>Олег Пепег</name>
+    <birthday>2003-02-02T00:00:00+05:00</birthday>
+    <inn>236492878972</inn>
+    <snils>768-237-848 76</snils>
+    <passport_series>6384</passport_series>
+    <passport_number>768283</passport_number>
+  </Employee>
+  <Employee>
+    <id>15</id>
+    <name>Никита Берюхов</name>
+    <birthday>2002-12-01T00:00:00+05:00</birthday>
+    <inn>462793687369</inn>
+    <snils>632-987-469 27</snils>
+    <passport_series />
+    <passport_number>79821232</passport_number>
+  </Employee>
+  <Job>
+    <id>2</id>
+    <employee_id>13</employee_id>
+    <start_date>2023-12-02T00:00:00+05:00</start_date>
+    <finish_date>2024-12-03T00:00:00+05:00</finish_date>
+    <description>Разобрала мебель</description>
+  </Job>
+  <Job>
+    <id>7</id>
+    <employee_id>12</employee_id>
+    <start_date>2024-09-10T00:00:00+05:00</start_date>
+    <finish_date>2024-09-22T00:00:00+05:00</finish_date>
+    <description>Провёл шпаклёвку стен</description>
+  </Job>
+  <Job>
+    <id>8</id>
+    <employee_id>12</employee_id>
+    <start_date>2024-03-15T00:00:00+05:00</start_date>
+    <finish_date>2024-03-20T00:00:00+05:00</finish_date>
+    <description>Закупил оборудование</description>
+  </Job>
+  <Job>
+    <id>11</id>
+    <employee_id>10</employee_id>
+    <start_date>2023-10-10T00:00:00+05:00</start_date>
+    <finish_date>2024-01-01T00:00:00+05:00</finish_date>
+    <description>Уложил плитку</description>
+  </Job>
+  <Job>
+    <id>12</id>
+    <employee_id>13</employee_id>
+    <start_date>2024-04-01T00:00:00+05:00</start_date>
+    <finish_date>2025-05-01T00:00:00+05:00</finish_date>
+    <description>Собрала мебель</description>
+  </Job>
+  <Job>
+    <id>13</id>
+    <employee_id>14</employee_id>
+    <start_date>2025-10-20T00:00:00+05:00</start_date>
+    <finish_date>2025-10-21T00:00:00+05:00</finish_date>
+    <description>Установил осветительные приборы</description>
+  </Job>
+  <Job>
+    <id>14</id>
+    <employee_id>11</employee_id>
+    <start_date>2024-01-02T00:00:00+05:00</start_date>
+    <finish_date>2024-01-02T00:00:00+05:00</finish_date>
+    <description>Разгрузил партию товара</description>
+  </Job>
+  <Job>
+    <id>15</id>
+    <employee_id>15</employee_id>
+    <start_date>2023-01-01T00:00:00+05:00</start_date>
+    <finish_date>2024-10-13T00:00:00+05:00</finish_date>
+    <description>Произвёл проверку пожарной безопасности</description>
+  </Job>
+  <Job>
+    <id>16</id>
+    <employee_id>10</employee_id>
+    <start_date>2019-03-14T00:00:00+05:00</start_date>
+    <finish_date>2019-03-15T00:00:00+05:00</finish_date>
+    <description>Залил фундамент</description>
+  </Job>
+  <Job>
+    <id>17</id>
+    <employee_id>10</employee_id>
+    <start_date>2024-09-21T00:00:00+05:00</start_date>
+    <finish_date>2024-09-22T00:00:00+05:00</finish_date>
+    <description>Выполнил лакокрасочные работы</description>
+  </Job>
+</DataSet1>
