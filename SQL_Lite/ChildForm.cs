@@ -16,5 +16,10 @@ namespace SQL_Lite
         {
             InitializeComponent();
         }
+
+        private void ChildForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

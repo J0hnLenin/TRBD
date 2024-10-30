@@ -21,5 +21,15 @@ namespace SQL_Lite
         {
 
         }
+
+        private void toolStripTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripTextBox4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

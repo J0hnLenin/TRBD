@@ -8,3 +8,14 @@ C:\Git\TRBD\SQL_Lite\obj\Debug\SQL_Lite.csproj.GenerateResource.cache
 C:\Git\TRBD\SQL_Lite\obj\Debug\SQL_Lite.csproj.CoreCompileInputs.cache
 C:\Git\TRBD\SQL_Lite\obj\Debug\SQL_Lite.exe
 C:\Git\TRBD\SQL_Lite\obj\Debug\SQL_Lite.pdb
+E:\Git\TRBD\SQL_Lite\bin\Debug\SQL_Lite.exe.config
+E:\Git\TRBD\SQL_Lite\bin\Debug\SQL_Lite.exe
+E:\Git\TRBD\SQL_Lite\bin\Debug\SQL_Lite.pdb
+E:\Git\TRBD\SQL_Lite\obj\Debug\SQL_Lite.csproj.AssemblyReference.cache
+E:\Git\TRBD\SQL_Lite\obj\Debug\SQL_Lite.ChildForm.resources
+E:\Git\TRBD\SQL_Lite\obj\Debug\SQL_Lite.MainForm.resources
+E:\Git\TRBD\SQL_Lite\obj\Debug\SQL_Lite.Properties.Resources.resources
+E:\Git\TRBD\SQL_Lite\obj\Debug\SQL_Lite.csproj.GenerateResource.cache
+E:\Git\TRBD\SQL_Lite\obj\Debug\SQL_Lite.csproj.CoreCompileInputs.cache
+E:\Git\TRBD\SQL_Lite\obj\Debug\SQL_Lite.exe
+E:\Git\TRBD\SQL_Lite\obj\Debug\SQL_Lite.pdb
