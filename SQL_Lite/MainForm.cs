@@ -80,6 +80,9 @@ namespace SQL_Lite
 
         }
 
+        private void movieMenuItem_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

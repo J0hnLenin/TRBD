@@ -36,8 +36,8 @@
             this.ticketMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.referenceTableStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.genreMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,6 +74,7 @@
             this.movieMenuItem.Name = "movieMenuItem";
             this.movieMenuItem.Size = new System.Drawing.Size(180, 26);
             this.movieMenuItem.Text = "Фильмы";
+            this.movieMenuItem.Click += new System.EventHandler(this.movieMenuItem_Click);
             // 
             // hallMenuItem
             // 
@@ -110,19 +111,19 @@
             this.referenceTableStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.referenceTableStripMenuItem_DropDownItemClicked);
             this.referenceTableStripMenuItem.Click += new System.EventHandler(this.referenceTableStripMenuItem_Click);
             // 
+            // genreMenuItem
+            // 
+            this.genreMenuItem.Name = "genreMenuItem";
+            this.genreMenuItem.Size = new System.Drawing.Size(131, 26);
+            this.genreMenuItem.Text = "Жанры";
+            this.genreMenuItem.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
             // reportStripMenuItem
             // 
             this.reportStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.reportStripMenuItem.Name = "reportStripMenuItem";
             this.reportStripMenuItem.Size = new System.Drawing.Size(76, 25);
             this.reportStripMenuItem.Text = "Отчёты";
-            // 
-            // genreMenuItem
-            // 
-            this.genreMenuItem.Name = "genreMenuItem";
-            this.genreMenuItem.Size = new System.Drawing.Size(219, 26);
-            this.genreMenuItem.Text = "Жанры";
-            this.genreMenuItem.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // MainForm
             // 

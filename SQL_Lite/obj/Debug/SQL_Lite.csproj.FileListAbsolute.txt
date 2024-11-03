@@ -101,3 +101,6 @@ E:\Git\TRBD\SQL_Lite\bin\Debug\runtimes\win-arm\native\e_sqlite3.dll
 E:\Git\TRBD\SQL_Lite\bin\Debug\SQLitePCLRaw.nativelibrary.dll
 E:\Git\TRBD\SQL_Lite\bin\Debug\Newtonsoft.Json.dll
 E:\Git\TRBD\SQL_Lite\bin\Debug\Newtonsoft.Json.xml
+E:\Git\TRBD\SQL_Lite\obj\Debug\SQL_Lite.SimpleElementForm.resources
+E:\Git\TRBD\SQL_Lite\obj\Debug\SQL_Lite.ClientElementForm.resources
+E:\Git\TRBD\SQL_Lite\obj\Debug\SQL_Lite.CustomMessageBoxForm.resources

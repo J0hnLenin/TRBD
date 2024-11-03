@@ -27,23 +27,36 @@ namespace SQL_Lite
                                 "Mode={1};",
                                 ReadSettings(), connectionMode);
         }
-        public static (SqliteConnection, SqliteDataReader) Select(string request)
+
+        private static void FillCommandParameters(SqliteCommand command, string[,] requestParameters)
+        {
+            for (int i = 0; i < requestParameters.GetLength(0); i++)
+            {
+                command.Parameters.AddWithValue(requestParameters[i, 0], requestParameters[i, 1]);
+            }
+        }
+        public static (SqliteConnection, SqliteDataReader) Select(string request, string[,] requestParameters)
         {
             SqliteConnection connection = new SqliteConnection(GetConnectionString("ReadOnly"));
             connection.Open();
-            SqliteCommand myCommand = new SqliteCommand(request, connection);
-            SqliteDataReader reader = myCommand.ExecuteReader();
+            SqliteCommand command = new SqliteCommand(request, connection);
+            FillCommandParameters(command, requestParameters);
+            SqliteDataReader reader = command.ExecuteReader();
             return (connection, reader);
         }
-        public static void FillDataGridView(DataGridView dataGridView, string request)
+        public static void FillDataGridView(DataGridView dataGridView, string request, string[,] requestParameters, int hidden_rows =0)
         {
             dataGridView.Rows.Clear();
             dataGridView.Columns.Clear();
-            (SqliteConnection connection, SqliteDataReader reader) = Select(request);
+            (SqliteConnection connection, SqliteDataReader reader) = Select(request, requestParameters);
 
             for (int i = 0; i < reader.FieldCount; i++)
-            {
+            {   
                 dataGridView.Columns.Add(reader.GetName(i), reader.GetName(i));
+                if (i < hidden_rows)
+                {
+                    dataGridView.Columns[reader.GetName(i)].Visible = false;
+                }
             }
 
             while (reader.Read())
@@ -54,6 +67,43 @@ namespace SQL_Lite
             }
 
             connection.Close();
+        }
+
+        public static void Change(string request, string[,] requestParameters)
+        {
+            using (SqliteConnection connection = new SqliteConnection(GetConnectionString("ReadWrite")))
+            {
+                connection.Open();
+
+                SqliteCommand command = connection.CreateCommand();
+                SqliteTransaction transaction;
+
+                transaction = connection.BeginTransaction();
+                command.Connection = connection;
+                command.Transaction = transaction;
+
+                try
+                {
+                    command.CommandText = request;
+                    FillCommandParameters(command, requestParameters);
+                    command.ExecuteNonQuery();
+                    transaction.Commit();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Commit Exception Type: {0}", ex.GetType());
+                    Console.WriteLine("Message: {0}", ex.Message);
+                    try
+                    {
+                        transaction.Rollback();
+                    }
+                    catch (Exception ex2)
+                    {
+                        Console.WriteLine("Rollback Exception Type: {0}", ex2.GetType());
+                        Console.WriteLine("Message: {0}", ex2.Message);
+                    }
+                }
+            }
         }
     }
 }
