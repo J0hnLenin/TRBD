@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Text.Json;
 using SQL_Lite;
 using System.Windows.Forms;
+using System.Diagnostics.Eventing.Reader;
 
 namespace SQL_Lite
 {
@@ -35,7 +36,7 @@ namespace SQL_Lite
                 command.Parameters.AddWithValue(requestParameters[i, 0], requestParameters[i, 1]);
             }
         }
-        public static (SqliteConnection, SqliteDataReader) Select(string request, string[,] requestParameters)
+        public static (SqliteConnection, SqliteDataReader) NoTransactionExecute(string request, string[,] requestParameters)
         {
             SqliteConnection connection = new SqliteConnection(GetConnectionString("ReadOnly"));
             connection.Open();
@@ -44,32 +45,8 @@ namespace SQL_Lite
             SqliteDataReader reader = command.ExecuteReader();
             return (connection, reader);
         }
-        public static void FillDataGridView(DataGridView dataGridView, string request, string[,] requestParameters, int hidden_rows =0)
-        {
-            dataGridView.Rows.Clear();
-            dataGridView.Columns.Clear();
-            (SqliteConnection connection, SqliteDataReader reader) = Select(request, requestParameters);
 
-            for (int i = 0; i < reader.FieldCount; i++)
-            {   
-                dataGridView.Columns.Add(reader.GetName(i), reader.GetName(i));
-                if (i < hidden_rows)
-                {
-                    dataGridView.Columns[reader.GetName(i)].Visible = false;
-                }
-            }
-
-            while (reader.Read())
-            {
-                object[] rowData = new object[reader.FieldCount];
-                reader.GetValues(rowData);
-                dataGridView.Rows.Add(rowData);
-            }
-
-            connection.Close();
-        }
-
-        public static void Change(string request, string[,] requestParameters)
+        public static int TransactionExecute(string request, string[,] requestParameters, bool needReturnID=false)
         {
             using (SqliteConnection connection = new SqliteConnection(GetConnectionString("ReadWrite")))
             {
@@ -84,10 +61,22 @@ namespace SQL_Lite
 
                 try
                 {
-                    command.CommandText = request;
-                    FillCommandParameters(command, requestParameters);
-                    command.ExecuteNonQuery();
-                    transaction.Commit();
+                    if (needReturnID)
+                    {
+                        request = string.Format("{0};SELECT last_insert_rowid()", request);
+                        command.CommandText = request;
+                        FillCommandParameters(command, requestParameters);
+                        int newId = Convert.ToInt32(command.ExecuteScalar());
+                        transaction.Commit();
+                        return newId;
+                    }
+                    else
+                    {
+                        command.CommandText = request;
+                        FillCommandParameters(command, requestParameters);
+                        command.ExecuteNonQuery();
+                        transaction.Commit();
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -104,6 +93,7 @@ namespace SQL_Lite
                     }
                 }
             }
+            return -1;
         }
     }
 }

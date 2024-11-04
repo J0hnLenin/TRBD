@@ -112,6 +112,7 @@
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(247, 26);
             this.nameTextBox.TabIndex = 1;
+            this.nameTextBox.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.nameTextBox_MaskInputRejected);
             // 
             // birthdayTextBox
             // 
@@ -127,8 +128,7 @@
             // 
             // ClientElementForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(638, 337);
             this.Controls.Add(this.birthdayTextBox);
             this.Controls.Add(this.nameTextBox);
@@ -138,10 +138,12 @@
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.birthdayLabel);
             this.Controls.Add(this.nameLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ClientElementForm";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Клиент";
             ((System.ComponentModel.ISupportInitialize)(this.ticketsDataGridView)).EndInit();

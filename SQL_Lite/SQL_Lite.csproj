@@ -182,6 +182,12 @@
     <Compile Include="ClientElementForm.Designer.cs">
       <DependentUpon>ClientElementForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClientSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientSelectForm.Designer.cs">
+      <DependentUpon>ClientSelectForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomMessageBoxForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,14 +195,57 @@
       <DependentUpon>CustomMessageBoxForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Database.cs" />
+    <Compile Include="DataGridExtension.cs" />
+    <Compile Include="GenreElementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenreElementForm.Designer.cs">
+      <DependentUpon>GenreElementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenreSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenreSelectForm.Designer.cs">
+      <DependentUpon>GenreSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HallElementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HallElementForm.Designer.cs">
+      <DependentUpon>HallElementForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MovieElementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MovieElementForm.Designer.cs">
+      <DependentUpon>MovieElementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MovieSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MovieSelectForm.Designer.cs">
+      <DependentUpon>MovieSelectForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionElementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SessionElementForm.Designer.cs">
+      <DependentUpon>SessionElementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SessionSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SessionSelectForm.Designer.cs">
+      <DependentUpon>SessionSelectForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SimpleElementForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +253,12 @@
       <DependentUpon>SimpleElementForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SQL_Requests.cs" />
+    <Compile Include="TicketElementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketElementForm.Designer.cs">
+      <DependentUpon>TicketElementForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Validation.cs" />
     <EmbeddedResource Include="ChildForm.resx">
       <DependentUpon>ChildForm.cs</DependentUpon>
@@ -211,11 +266,29 @@
     <EmbeddedResource Include="ClientElementForm.resx">
       <DependentUpon>ClientElementForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ClientSelectForm.resx">
+      <DependentUpon>ClientSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomMessageBoxForm.resx">
       <DependentUpon>CustomMessageBoxForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GenreElementForm.resx">
+      <DependentUpon>GenreElementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenreSelectForm.resx">
+      <DependentUpon>GenreSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HallElementForm.resx">
+      <DependentUpon>HallElementForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovieElementForm.resx">
+      <DependentUpon>MovieElementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovieSelectForm.resx">
+      <DependentUpon>MovieSelectForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -226,8 +299,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SessionElementForm.resx">
+      <DependentUpon>SessionElementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SessionSelectForm.resx">
+      <DependentUpon>SessionSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SimpleElementForm.resx">
       <DependentUpon>SimpleElementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketElementForm.resx">
+      <DependentUpon>TicketElementForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

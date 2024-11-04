@@ -17,18 +17,19 @@ namespace SQL_Lite
     public partial class ClientElementForm : Form
     {
         int ID;
-        bool newClient;
-        public ClientElementForm(int id, bool newClient)
+        bool newElement;
+
+        public ClientElementForm(int id, bool newElement)
         {
             InitializeComponent();
             ID = id;
-            this.newClient = newClient;
-            if (!newClient)
+            this.newElement = newElement;
+            if (!newElement)
             {
                 string[,] parameters = { { "@id", ID.ToString() } };
 
                 string query = SQL_Requests.SelectClietByID();
-                (SqliteConnection connection, SqliteDataReader reader) = Database.Select(query, parameters);
+                (SqliteConnection connection, SqliteDataReader reader) = Database.NoTransactionExecute(query, parameters);
                 while (reader.Read())
                 {
                     nameTextBox.Text = reader.GetValue(0).ToString();
@@ -36,36 +37,31 @@ namespace SQL_Lite
                 }
                 connection.Close();
 
-                ticketsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-                query = SQL_Requests.SelectClietTiketsByID();
-                Database.FillDataGridView(ticketsDataGridView, query, parameters, 1);
-                ticketsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-                ticketsDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                DataGridExtension.UpdateDataGridView(ticketsDataGridView, SQL_Requests.SelectClietTiketsByID(), parameters);
             }
         }
 
         private void SaveClient()
         {
-            if (newClient)
+            if (newElement)
             {
                 string query = SQL_Requests.InsertCliet();
                 string[,]  parameters = {
                     { "@name", nameTextBox.Text},
-                    { "@birthday", birthdayTextBox.Text}
+                    { "@birthday", Validation.changeDateFormat(birthdayTextBox.Text)}
                 };
-                Database.Change(query, parameters);
+                Database.TransactionExecute(query, parameters);
             }
             else
             {
                 string query = SQL_Requests.UpdateCliet();
                 string[,] parameters = {
                     { "@name", nameTextBox.Text},
-                    { "@birthday", birthdayTextBox.Text},
+                    { "@birthday", Validation.changeDateFormat(birthdayTextBox.Text)},
                     { "@id", ID.ToString()}
                 };
-                Database.Change(query, parameters);
+                Database.TransactionExecute(query, parameters);
             }
-            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -92,6 +88,11 @@ namespace SQL_Lite
         private void birthdayTextBox_Validating(object sender, CancelEventArgs e)
         {
             e.Cancel = !Validation.Date(birthdayTextBox);
+        }
+
+        private void nameTextBox_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }

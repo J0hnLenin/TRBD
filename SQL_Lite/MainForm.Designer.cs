@@ -72,32 +72,32 @@
             // movieMenuItem
             // 
             this.movieMenuItem.Name = "movieMenuItem";
-            this.movieMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.movieMenuItem.Size = new System.Drawing.Size(141, 26);
             this.movieMenuItem.Text = "Фильмы";
             this.movieMenuItem.Click += new System.EventHandler(this.movieMenuItem_Click);
             // 
             // hallMenuItem
             // 
             this.hallMenuItem.Name = "hallMenuItem";
-            this.hallMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.hallMenuItem.Size = new System.Drawing.Size(141, 26);
             this.hallMenuItem.Text = "Залы";
             // 
             // sessionMenuItem
             // 
             this.sessionMenuItem.Name = "sessionMenuItem";
-            this.sessionMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.sessionMenuItem.Size = new System.Drawing.Size(141, 26);
             this.sessionMenuItem.Text = "Сеансы";
             // 
             // ticketMenuItem
             // 
             this.ticketMenuItem.Name = "ticketMenuItem";
-            this.ticketMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.ticketMenuItem.Size = new System.Drawing.Size(141, 26);
             this.ticketMenuItem.Text = "Билеты";
             // 
             // clientMenuItem
             // 
             this.clientMenuItem.Name = "clientMenuItem";
-            this.clientMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.clientMenuItem.Size = new System.Drawing.Size(141, 26);
             this.clientMenuItem.Text = "Клиенты";
             // 
             // referenceTableStripMenuItem
@@ -135,6 +135,7 @@
             this.MainMenuStrip = this.mainMenuStrip;
             this.Name = "MainForm";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Система управления кинотеатром";
             this.Load += new System.EventHandler(this.Main_Load);
             this.mainMenuStrip.ResumeLayout(false);

@@ -3,52 +3,52 @@
   "WorkspaceRootPath": "E:\\Git\\TRBD\\SQL_Lite\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|E:\\Git\\TRBD\\SQL_Lite\\clientelementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|solutionrelative:clientelementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|e:\\git\\trbd\\sql_lite\\ticketelementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|solutionrelative:ticketelementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|E:\\Git\\TRBD\\SQL_Lite\\childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|e:\\git\\trbd\\sql_lite\\ticketelementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|solutionrelative:ticketelementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|e:\\git\\trbd\\sql_lite\\sessionelementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|solutionrelative:sessionelementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|e:\\git\\trbd\\sql_lite\\movieselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|solutionrelative:movieselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|e:\\git\\trbd\\sql_lite\\clientselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|solutionrelative:clientselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|e:\\git\\trbd\\sql_lite\\clientselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|solutionrelative:clientselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|e:\\git\\trbd\\sql_lite\\movieselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|solutionrelative:movieselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|e:\\git\\trbd\\sql_lite\\sessionselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|solutionrelative:sessionselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|e:\\git\\trbd\\sql_lite\\childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|solutionrelative:childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|E:\\Git\\TRBD\\SQL_Lite\\sql_requests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|e:\\git\\trbd\\sql_lite\\sessionselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|solutionrelative:sessionselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|e:\\git\\trbd\\sql_lite\\sql_requests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|solutionrelative:sql_requests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|E:\\Git\\TRBD\\SQL_Lite\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|solutionrelative:database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|e:\\git\\trbd\\sql_lite\\custommessageboxform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|solutionrelative:custommessageboxform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|e:\\git\\trbd\\sql_lite\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|solutionrelative:validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|e:\\git\\trbd\\sql_lite\\clientelementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|solutionrelative:clientelementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|E:\\Git\\TRBD\\SQL_Lite\\childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|solutionrelative:childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|e:\\git\\trbd\\sql_lite\\custommessageboxform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|solutionrelative:custommessageboxform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|E:\\Git\\TRBD\\SQL_Lite\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|E:\\Git\\TRBD\\SQL_Lite\\simpleelementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|solutionrelative:simpleelementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|E:\\Git\\TRBD\\SQL_Lite\\simpleelementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|solutionrelative:simpleelementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|e:\\git\\trbd\\sql_lite\\sessionelementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F743D952-A670-4F18-AE7E-06B1BC83CDE6}|SQL_Lite.csproj|solutionrelative:sessionelementform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 207,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,152 +78,154 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Validation.cs",
-              "DocumentMoniker": "E:\\Git\\TRBD\\SQL_Lite\\Validation.cs",
-              "RelativeDocumentMoniker": "Validation.cs",
-              "ToolTip": "E:\\Git\\TRBD\\SQL_Lite\\Validation.cs",
-              "RelativeToolTip": "Validation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T16:44:16.343Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CustomMessageBoxForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "E:\\Git\\TRBD\\SQL_Lite\\CustomMessageBoxForm.cs",
-              "RelativeDocumentMoniker": "CustomMessageBoxForm.cs",
-              "ToolTip": "E:\\Git\\TRBD\\SQL_Lite\\CustomMessageBoxForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "CustomMessageBoxForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T16:29:23.908Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "ChildForm.cs",
               "DocumentMoniker": "E:\\Git\\TRBD\\SQL_Lite\\ChildForm.cs",
               "RelativeDocumentMoniker": "ChildForm.cs",
               "ToolTip": "E:\\Git\\TRBD\\SQL_Lite\\ChildForm.cs",
               "RelativeToolTip": "ChildForm.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAMwFgAAABdAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAWwFEAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T14:58:23.367Z",
+              "WhenOpened": "2024-11-04T18:56:32.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SessionSelectForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "E:\\Git\\TRBD\\SQL_Lite\\SessionSelectForm.cs",
+              "RelativeDocumentMoniker": "SessionSelectForm.cs",
+              "ToolTip": "E:\\Git\\TRBD\\SQL_Lite\\SessionSelectForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "SessionSelectForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T18:47:51.714Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MovieSelectForm.cs",
+              "DocumentMoniker": "E:\\Git\\TRBD\\SQL_Lite\\MovieSelectForm.cs",
+              "RelativeDocumentMoniker": "MovieSelectForm.cs",
+              "ToolTip": "E:\\Git\\TRBD\\SQL_Lite\\MovieSelectForm.cs",
+              "RelativeToolTip": "MovieSelectForm.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAswAwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T18:44:50.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ClientSelectForm.cs",
+              "DocumentMoniker": "E:\\Git\\TRBD\\SQL_Lite\\ClientSelectForm.cs",
+              "RelativeDocumentMoniker": "ClientSelectForm.cs",
+              "ToolTip": "E:\\Git\\TRBD\\SQL_Lite\\ClientSelectForm.cs",
+              "RelativeToolTip": "ClientSelectForm.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAwwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T18:44:36.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ClientSelectForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "E:\\Git\\TRBD\\SQL_Lite\\ClientSelectForm.cs",
+              "RelativeDocumentMoniker": "ClientSelectForm.cs",
+              "ToolTip": "E:\\Git\\TRBD\\SQL_Lite\\ClientSelectForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "ClientSelectForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T18:42:51.058Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MovieSelectForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "E:\\Git\\TRBD\\SQL_Lite\\MovieSelectForm.cs",
+              "RelativeDocumentMoniker": "MovieSelectForm.cs",
+              "ToolTip": "E:\\Git\\TRBD\\SQL_Lite\\MovieSelectForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "MovieSelectForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T18:38:05.367Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SessionElementForm.cs",
+              "DocumentMoniker": "E:\\Git\\TRBD\\SQL_Lite\\SessionElementForm.cs",
+              "RelativeDocumentMoniker": "SessionElementForm.cs",
+              "ToolTip": "E:\\Git\\TRBD\\SQL_Lite\\SessionElementForm.cs",
+              "RelativeToolTip": "SessionElementForm.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAmwBUAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T18:34:55.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TicketElementForm.cs",
+              "DocumentMoniker": "E:\\Git\\TRBD\\SQL_Lite\\TicketElementForm.cs",
+              "RelativeDocumentMoniker": "TicketElementForm.cs",
+              "ToolTip": "E:\\Git\\TRBD\\SQL_Lite\\TicketElementForm.cs",
+              "RelativeToolTip": "TicketElementForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T18:33:21.426Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ClientElementForm.cs",
-              "DocumentMoniker": "E:\\Git\\TRBD\\SQL_Lite\\ClientElementForm.cs",
-              "RelativeDocumentMoniker": "ClientElementForm.cs",
-              "ToolTip": "E:\\Git\\TRBD\\SQL_Lite\\ClientElementForm.cs",
-              "RelativeToolTip": "ClientElementForm.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAgwEIAAAANAAAAAAAAAA==",
+              "Title": "TicketElementForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "E:\\Git\\TRBD\\SQL_Lite\\TicketElementForm.cs",
+              "RelativeDocumentMoniker": "TicketElementForm.cs",
+              "ToolTip": "E:\\Git\\TRBD\\SQL_Lite\\TicketElementForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "TicketElementForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T06:55:39.091Z",
+              "WhenOpened": "2024-11-04T18:25:50.664Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SessionSelectForm.cs",
+              "DocumentMoniker": "E:\\Git\\TRBD\\SQL_Lite\\SessionSelectForm.cs",
+              "RelativeDocumentMoniker": "SessionSelectForm.cs",
+              "ToolTip": "E:\\Git\\TRBD\\SQL_Lite\\SessionSelectForm.cs",
+              "RelativeToolTip": "SessionSelectForm.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAYwCcAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T18:49:48.317Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "SQL_Requests.cs",
               "DocumentMoniker": "E:\\Git\\TRBD\\SQL_Lite\\SQL_Requests.cs",
               "RelativeDocumentMoniker": "SQL_Requests.cs",
               "ToolTip": "E:\\Git\\TRBD\\SQL_Lite\\SQL_Requests.cs",
               "RelativeToolTip": "SQL_Requests.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAYwHIAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCgAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T17:39:46.992Z",
+              "WhenOpened": "2024-11-04T18:51:41.689Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Database.cs",
-              "DocumentMoniker": "E:\\Git\\TRBD\\SQL_Lite\\Database.cs",
-              "RelativeDocumentMoniker": "Database.cs",
-              "ToolTip": "E:\\Git\\TRBD\\SQL_Lite\\Database.cs",
-              "RelativeToolTip": "Database.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwCsAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T16:12:15.865Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ClientElementForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "E:\\Git\\TRBD\\SQL_Lite\\ClientElementForm.cs",
-              "RelativeDocumentMoniker": "ClientElementForm.cs",
-              "ToolTip": "E:\\Git\\TRBD\\SQL_Lite\\ClientElementForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "ClientElementForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T06:34:43.804Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ChildForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "E:\\Git\\TRBD\\SQL_Lite\\ChildForm.cs",
-              "RelativeDocumentMoniker": "ChildForm.cs",
-              "ToolTip": "E:\\Git\\TRBD\\SQL_Lite\\ChildForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "ChildForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T10:28:07.501Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CustomMessageBoxForm.cs",
-              "DocumentMoniker": "E:\\Git\\TRBD\\SQL_Lite\\CustomMessageBoxForm.cs",
-              "RelativeDocumentMoniker": "CustomMessageBoxForm.cs",
-              "ToolTip": "E:\\Git\\TRBD\\SQL_Lite\\CustomMessageBoxForm.cs",
-              "RelativeToolTip": "CustomMessageBoxForm.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAawBEAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T16:33:01.935Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "E:\\Git\\TRBD\\SQL_Lite\\MainForm.cs",
-              "RelativeDocumentMoniker": "MainForm.cs",
-              "ToolTip": "E:\\Git\\TRBD\\SQL_Lite\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T09:51:55.039Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SimpleElementForm.cs",
-              "DocumentMoniker": "E:\\Git\\TRBD\\SQL_Lite\\SimpleElementForm.cs",
-              "RelativeDocumentMoniker": "SimpleElementForm.cs",
-              "ToolTip": "E:\\Git\\TRBD\\SQL_Lite\\SimpleElementForm.cs",
-              "RelativeToolTip": "SimpleElementForm.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T05:24:29.361Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "SimpleElementForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "E:\\Git\\TRBD\\SQL_Lite\\SimpleElementForm.cs",
-              "RelativeDocumentMoniker": "SimpleElementForm.cs",
-              "ToolTip": "E:\\Git\\TRBD\\SQL_Lite\\SimpleElementForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "SimpleElementForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Title": "SessionElementForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "E:\\Git\\TRBD\\SQL_Lite\\SessionElementForm.cs",
+              "RelativeDocumentMoniker": "SessionElementForm.cs",
+              "ToolTip": "E:\\Git\\TRBD\\SQL_Lite\\SessionElementForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "SessionElementForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T09:37:33.915Z"
+              "WhenOpened": "2024-11-04T18:27:25.17Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             }
           ]
         }

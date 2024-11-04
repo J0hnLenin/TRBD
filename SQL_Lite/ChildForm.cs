@@ -16,84 +16,82 @@ namespace SQL_Lite
 {
     public partial class ChildForm : Form
     {
+        private string dataGridQuery = "";
+
         public ChildForm(ToolStripItemClickedEventArgs e)
         {
 
             InitializeComponent();
-            this.dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.Text = e.ClickedItem.Text;
-
-            string query = "";
+            
+            Text = e.ClickedItem.Text;
             switch (e.ClickedItem.Name)
             {
                 case "movieMenuItem":
-                    this.Name = "movieTableForm";
-                    query = SQL_Requests.SelectMovies();
+                    Name = "movieTableForm";
+                    dataGridQuery = SQL_Requests.SelectMovies();
                     break;
                 case "sessionMenuItem":
-                    this.Name = "sessionTableForm";
-                    query = SQL_Requests.SelectSessions();
+                    Name = "sessionTableForm";
+                    dataGridQuery = SQL_Requests.SelectSessions();
                     break;
                 case "hallMenuItem":
-                    this.Name = "hallTableForm";
-                    query = SQL_Requests.SelectHalls();
+                    Name = "hallTableForm";
+                    dataGridQuery = SQL_Requests.SelectHalls();
                     break;
                 case "ticketMenuItem":
-                    this.Name = "ticketTableForm";
-                    query = SQL_Requests.SelectTickets();
+                    Name = "ticketTableForm";
+                    dataGridQuery = SQL_Requests.SelectTickets();
                     break;
                 case "clientMenuItem":
-                    this.Name = "clientTableForm";
-                    query = SQL_Requests.SelectClients();
+                    Name = "clientTableForm";
+                    dataGridQuery = SQL_Requests.SelectClients();
                     break;
                 case "genreMenuItem":
-                    this.Name = "genreTableForm";
-                    query = SQL_Requests.SelectGenres();
+                    Name = "genreTableForm";
+                    dataGridQuery = SQL_Requests.SelectGenres();
                     break;
             }
-
-            Database.FillDataGridView(dataGridView, query, new string[0,2], 1);
-            this.dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DataGridExtension.UpdateDataGridView(dataGridView, dataGridQuery, new string[0, 2]);
         }
 
         private void OpenElementForm(bool newElement)
         {
             int editID;
             if (newElement) {
-                editID = 0;
+                editID = -1;
             }
             else
             {
                 editID = Convert.ToInt32(dataGridView.CurrentRow.Cells[0].Value);
             }
-            switch (this.Name)
+            switch (Name)
             {
                 case "movieTableForm":
-                    //ClientElementForm movieDialogForm = new ClientElementForm();
-                    //movieDialogForm.ShowDialog();
+                    MovieElementForm movieDialogForm = new MovieElementForm(editID, newElement);
+                    movieDialogForm.ShowDialog();
                     break;
                 case "sessionTableForm":
-                    //ClientElementForm sessionDialogForm = new ClientElementForm();
-                    //sessionDialogForm.ShowDialog();
+                    SessionElementForm sessionDialogForm = new SessionElementForm(editID, newElement);
+                    sessionDialogForm.ShowDialog();
                     break;
                 case "hallTableForm":
-                    //ClientElementForm hallDialogForm = new ClientElementForm();
-                    //hallDialogForm.ShowDialog();
+                    HallElementForm hallDialogForm = new HallElementForm(editID, newElement);
+                    hallDialogForm.ShowDialog();
                     break;
                 case "ticketTableForm":
-                    //ClientElementForm ticketDialogForm = new ClientElementForm();
-                    //ticketDialogForm.ShowDialog();
+                    TicketElementForm ticketDialogForm = new TicketElementForm(editID, newElement);
+                    ticketDialogForm.ShowDialog();
                     break;
                 case "clientTableForm":
-                    
                     ClientElementForm clientDialogForm = new ClientElementForm(editID, newElement);
                     clientDialogForm.ShowDialog();
                     break;
                 case "genreTableForm":
-                    //ClientElementForm genreDialogForm = new ClientElementForm();
-                    //genreDialogForm.ShowDialog();
+                    GenreElementForm genreDialogForm = new GenreElementForm(editID, newElement);
+                    genreDialogForm.ShowDialog();
                     break;
             }
+            DataGridExtension.UpdateDataGridView(dataGridView, dataGridQuery, new string[0,2], id: editID);
         }
         private void ChildForm_Load(object sender, EventArgs e)
         {
@@ -102,17 +100,28 @@ namespace SQL_Lite
 
         private void createButton_Click(object sender, EventArgs e)
         {
+            if (dataGridView.CurrentCell == null)
+                return;
             OpenElementForm(true);
         }
 
         private void editButton_Click(object sender, EventArgs e)
         {
+            if (dataGridView.CurrentCell == null)
+                return;
             OpenElementForm(false);
         }
 
         private void deleteBbutton_Click(object sender, EventArgs e)
         {
-
+            if (dataGridView.CurrentCell == null)
+                return;
+            string tableName = Name.Substring(0, Name.Length-9);
+            string query = SQL_Requests.DeleteByID(tableName);
+            int deleteID = Convert.ToInt32(dataGridView.CurrentRow.Cells[0].Value);
+            string[,] parameters = { {"@id", deleteID.ToString()} };
+            Database.TransactionExecute(query, parameters);
+            DataGridExtension.UpdateDataGridView(dataGridView, dataGridQuery, new string[0, 2]);
         }
 
         private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
