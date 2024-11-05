@@ -55,11 +55,14 @@ namespace SQL_Lite
         public static string SelectTickets()
         {
             return @"SELECT
-                    ticket_id AS 'id',
+                    ticket_id AS 'Номер билета',
+                    name AS 'Клиент',
                     strftime('%d.%m.%Y %H:%M:%S', purchase_time) AS 'Время покупки',
                     row AS 'Ряд',
                     seat AS 'Место'
-                    FROM ticket";
+                    FROM ticket
+                    INNER JOIN client ON
+                    ticket.client_id = client.client_id";
         }
         public static string SelectClients()
         {
@@ -180,6 +183,54 @@ namespace SQL_Lite
                     genre_title AS 'Жанр'
                     FROM genre
                     WHERE genre_id NOT IN ({0})", string.Join(", ", genres));
+        }
+        public static string SelectTicketByID()
+        {
+            return @"SELECT
+                    client.client_id,
+                    client.name,
+                    session.session_id,
+                    session.hall_id,
+                    session.cost,
+                    strftime('%d.%m.%Y %H:%M', ticket.purchase_time),
+                    ticket.row,
+                    ticket.seat,
+                    movie_title,
+                    strftime('%d.%m.%Y', start_time),
+                    strftime('%H:%M', start_time),
+                    strftime('%H:%M', duration),
+                    COUNT(row_id),
+                    MAX(num_seats)
+                    FROM ticket 
+                    INNER JOIN client ON
+                    ticket.client_id = client.client_id
+                    INNER JOIN session ON
+                    ticket.session_id = session.session_id
+                    INNER JOIN movie ON
+                    session.movie_id = movie.movie_id
+                    INNER JOIN row ON
+                    session.hall_id = row.hall_id
+                    WHERE ticket_id = @id
+                    GROUP BY 
+                    client.client_id,
+                    client.name,
+                    session.session_id,
+                    session.cost,
+                    ticket.row,
+                    ticket.seat,
+                    movie_title,
+                    start_time,
+                    duration";
+        }
+        public static string SelectOtherSeats()
+        {
+            return @"SELECT
+                    ticket.row,
+                    ticket.seat
+                    FROM ticket 
+                    WHERE
+                    ticket_id <> @ticket_id
+                    AND session_id = @session_id";
         }
 
         /////////////////////////////////////

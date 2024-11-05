@@ -29,29 +29,35 @@ namespace SQL_Lite
                 case "movieMenuItem":
                     Name = "movieTableForm";
                     dataGridQuery = SQL_Requests.SelectMovies();
+                    DataGridExtension.UpdateDataGridView(dataGridView, dataGridQuery, new string[0, 2]);
                     break;
                 case "sessionMenuItem":
                     Name = "sessionTableForm";
                     dataGridQuery = SQL_Requests.SelectSessions();
+                    DataGridExtension.UpdateDataGridView(dataGridView, dataGridQuery, new string[0, 2]);
                     break;
                 case "hallMenuItem":
                     Name = "hallTableForm";
                     dataGridQuery = SQL_Requests.SelectHalls();
+                    DataGridExtension.UpdateDataGridView(dataGridView, dataGridQuery, new string[0, 2]);
                     break;
                 case "ticketMenuItem":
                     Name = "ticketTableForm";
                     dataGridQuery = SQL_Requests.SelectTickets();
+                    DataGridExtension.UpdateDataGridView(dataGridView, dataGridQuery, new string[0, 2], hiddenRows: 0);
                     break;
                 case "clientMenuItem":
                     Name = "clientTableForm";
                     dataGridQuery = SQL_Requests.SelectClients();
+                    DataGridExtension.UpdateDataGridView(dataGridView, dataGridQuery, new string[0, 2]);
                     break;
                 case "genreMenuItem":
                     Name = "genreTableForm";
                     dataGridQuery = SQL_Requests.SelectGenres();
+                    DataGridExtension.UpdateDataGridView(dataGridView, dataGridQuery, new string[0, 2]);
                     break;
             }
-            DataGridExtension.UpdateDataGridView(dataGridView, dataGridQuery, new string[0, 2]);
+            
         }
 
         private void OpenElementForm(bool newElement)
@@ -69,29 +75,35 @@ namespace SQL_Lite
                 case "movieTableForm":
                     MovieElementForm movieDialogForm = new MovieElementForm(editID, newElement);
                     movieDialogForm.ShowDialog();
+                    DataGridExtension.UpdateDataGridView(dataGridView, dataGridQuery, new string[0, 2], id: editID);
                     break;
                 case "sessionTableForm":
                     SessionElementForm sessionDialogForm = new SessionElementForm(editID, newElement);
                     sessionDialogForm.ShowDialog();
+                    DataGridExtension.UpdateDataGridView(dataGridView, dataGridQuery, new string[0, 2], id: editID);
                     break;
                 case "hallTableForm":
                     HallElementForm hallDialogForm = new HallElementForm(editID, newElement);
                     hallDialogForm.ShowDialog();
+                    DataGridExtension.UpdateDataGridView(dataGridView, dataGridQuery, new string[0, 2], id: editID);
                     break;
                 case "ticketTableForm":
                     TicketElementForm ticketDialogForm = new TicketElementForm(editID, newElement);
                     ticketDialogForm.ShowDialog();
+                    DataGridExtension.UpdateDataGridView(dataGridView, dataGridQuery, new string[0, 2], hiddenRows: 0, id: editID);
                     break;
                 case "clientTableForm":
                     ClientElementForm clientDialogForm = new ClientElementForm(editID, newElement);
                     clientDialogForm.ShowDialog();
+                    DataGridExtension.UpdateDataGridView(dataGridView, dataGridQuery, new string[0, 2], id: editID);
                     break;
                 case "genreTableForm":
                     GenreElementForm genreDialogForm = new GenreElementForm(editID, newElement);
                     genreDialogForm.ShowDialog();
+                    DataGridExtension.UpdateDataGridView(dataGridView, dataGridQuery, new string[0, 2], id: editID);
                     break;
             }
-            DataGridExtension.UpdateDataGridView(dataGridView, dataGridQuery, new string[0,2], id: editID);
+            
         }
         private void ChildForm_Load(object sender, EventArgs e)
         {
