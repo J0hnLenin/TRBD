@@ -38,6 +38,10 @@
             this.sessionButton = new System.Windows.Forms.Button();
             this.sessionTextBox = new System.Windows.Forms.MaskedTextBox();
             this.sessionLabel = new System.Windows.Forms.Label();
+            this.rowTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.rowLabel = new System.Windows.Forms.Label();
+            this.seatTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.seatLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // clientButton
@@ -154,11 +158,59 @@
             this.sessionLabel.TabIndex = 37;
             this.sessionLabel.Text = "Сеанс";
             // 
+            // rowTextBox
+            // 
+            this.rowTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.rowTextBox.Location = new System.Drawing.Point(382, 80);
+            this.rowTextBox.Mask = "00000";
+            this.rowTextBox.Name = "rowTextBox";
+            this.rowTextBox.ReadOnly = true;
+            this.rowTextBox.Size = new System.Drawing.Size(80, 26);
+            this.rowTextBox.TabIndex = 39;
+            this.rowTextBox.ValidatingType = typeof(int);
+            // 
+            // rowLabel
+            // 
+            this.rowLabel.AutoSize = true;
+            this.rowLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.rowLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.rowLabel.Location = new System.Drawing.Point(337, 83);
+            this.rowLabel.Name = "rowLabel";
+            this.rowLabel.Size = new System.Drawing.Size(39, 20);
+            this.rowLabel.TabIndex = 40;
+            this.rowLabel.Text = "Ряд";
+            // 
+            // seatTextBox
+            // 
+            this.seatTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.seatTextBox.Location = new System.Drawing.Point(531, 80);
+            this.seatTextBox.Mask = "00000";
+            this.seatTextBox.Name = "seatTextBox";
+            this.seatTextBox.ReadOnly = true;
+            this.seatTextBox.Size = new System.Drawing.Size(80, 26);
+            this.seatTextBox.TabIndex = 41;
+            this.seatTextBox.ValidatingType = typeof(int);
+            // 
+            // seatLabel
+            // 
+            this.seatLabel.AutoSize = true;
+            this.seatLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.seatLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.seatLabel.Location = new System.Drawing.Point(468, 83);
+            this.seatLabel.Name = "seatLabel";
+            this.seatLabel.Size = new System.Drawing.Size(57, 20);
+            this.seatLabel.TabIndex = 42;
+            this.seatLabel.Text = "Место";
+            // 
             // TicketElementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(623, 450);
+            this.Controls.Add(this.seatTextBox);
+            this.Controls.Add(this.seatLabel);
+            this.Controls.Add(this.rowTextBox);
+            this.Controls.Add(this.rowLabel);
             this.Controls.Add(this.sessionButton);
             this.Controls.Add(this.sessionTextBox);
             this.Controls.Add(this.sessionLabel);
@@ -193,5 +245,9 @@
         private System.Windows.Forms.Button sessionButton;
         private System.Windows.Forms.MaskedTextBox sessionTextBox;
         private System.Windows.Forms.Label sessionLabel;
+        private System.Windows.Forms.MaskedTextBox rowTextBox;
+        private System.Windows.Forms.Label rowLabel;
+        private System.Windows.Forms.MaskedTextBox seatTextBox;
+        private System.Windows.Forms.Label seatLabel;
     }
 }

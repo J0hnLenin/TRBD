@@ -48,6 +48,7 @@ namespace SQL_Lite
                 int startPositionWidth = (parentWidth - d) / 2;
                 Location = new Point(startPositionWidth + seatNumber * (Width+margin), headerHeigth + rowNumber * (Height+margin));
                 BackColor = color;
+                Console.WriteLine("{0} {1}", Location.X.ToString(), Location.Y.ToString());
             }
         }
         private Seat[,] seats;
@@ -73,6 +74,8 @@ namespace SQL_Lite
                     purcaseTimeTextBox.Text = reader.GetValue(5).ToString();
                     row = System.Int32.Parse(reader.GetValue(6).ToString());
                     seat = System.Int32.Parse(reader.GetValue(7).ToString());
+                    rowTextBox.Text = row.ToString();
+                    seatTextBox.Text = seat.ToString();
                     string movie = reader.GetValue(8).ToString();
                     string date = reader.GetValue(9).ToString();
                     string start_time = reader.GetValue(10).ToString();
@@ -84,9 +87,6 @@ namespace SQL_Lite
                     maxSeatsPerRow = System.Int32.Parse(reader.GetValue(13).ToString());
                 }
                 connection.Close();
-                this.Height = headerHeigth + (seatHeight + margin) * rows + footerHeigth;
-                cancelButton.Location = new Point(cancelButton.Location.X, this.Height - footerButtonMargin);
-                saveButton.Location = new Point(saveButton.Location.X, this.Height - footerButtonMargin);
                 UpdateRows();
                 InitializeCinemaHall();
             }
@@ -120,6 +120,7 @@ namespace SQL_Lite
 
         private void InitializeCinemaHall()
         {
+            this.Height = headerHeigth + (seatHeight + margin) * rows + footerHeigth;
             seats = new Seat[rows, maxSeatsPerRow];
             for (int i = 0; i < rows; i++)
             {
@@ -136,15 +137,59 @@ namespace SQL_Lite
                     this.Controls.Add(seats[i, j]);
                 }
             }
+            cancelButton.Location = new Point(cancelButton.Location.X, this.Height - footerButtonMargin);
+            saveButton.Location = new Point(saveButton.Location.X, this.Height - footerButtonMargin);
+        }
+        private void ClearCinemaHall()
+        {
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < seatsPerRow[i]; j++)
+                {
+                    this.Controls.Remove(seats[i, j]);
+                }
+            }
+            rows = 0;
         }
 
         private void Button_Click(Seat s)
         {
-            // Изменяем цвет кнопки
-            //buttons[row, seat].BackColor = buttons[row, seat].BackColor == Color.Green ? Color.Red : Color.Green;
+            if(seats[s.rowNumber-1, s.seatNumber-1].BackColor == Color.Gray)
+            {
+                if((row != -1)||(seat != -1)) seats[row-1, seat-1].BackColor = Color.Gray;
+                seats[s.rowNumber-1, s.seatNumber-1].BackColor = Color.Green;
+                row = s.rowNumber;
+                seat = s.seatNumber;
+                rowTextBox.Text = row.ToString();
+                seatTextBox.Text = seat.ToString();
+            }
+        }
 
-            // Выводим ряд и номер места в консоль
-            Console.WriteLine($"Row: {s.rowNumber}, Seat: {s.seatNumber}");
+        private void SaveTicket()
+        {
+            if (newElement)
+            {
+                string query = SQL_Requests.InsertTicket();
+                string[,] parameters = {
+                    { "@client_id", clientID},
+                    { "@session_id", sessionID},
+                    { "@row", rowTextBox.Text},
+                    { "@seat", seatTextBox.Text}
+                };
+                ID = Database.TransactionExecute(query, parameters, needReturnID: true);
+            }
+            else
+            {
+                string query = SQL_Requests.UpdateTicket();
+                string[,] parameters = {
+                    { "@client_id", clientID},
+                    { "@session_id", sessionID},
+                    { "@row", rowTextBox.Text},
+                    { "@seat", seatTextBox.Text},
+                    { "@id", ID.ToString()}
+                };
+                Database.TransactionExecute(query, parameters);
+            }
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
@@ -154,7 +199,11 @@ namespace SQL_Lite
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            Close();
+            if (Validation.CheckFill("Клиент", clientTextBox.Text) && Validation.CheckFill("Сеанс", sessionTextBox.Text) && Validation.CheckFill("Ряд", row.ToString()) && Validation.CheckFill("Место", seat.ToString()))
+            {
+                SaveTicket();
+                Close();
+            }
         }
 
         private void clientButton_Click(object sender, EventArgs e)
@@ -176,8 +225,22 @@ namespace SQL_Lite
 
             if (sessionDialogForm.success)
             {
+                row = -1;
+                seat = -1;
+                rowTextBox.Text = "";
+                seatTextBox.Text = "";
+                if(sessionID != "-1")
+                {
+                    ClearCinemaHall();
+                }
                 sessionID = sessionDialogForm.selectedSessionID;
                 sessionTextBox.Text = sessionDialogForm.selectedSessionName;
+                hallID = sessionDialogForm.selectedHallID;
+                rows = sessionDialogForm.selectedRows;
+                maxSeatsPerRow = sessionDialogForm.selectedMaxSeats;
+                UpdateRows();
+                InitializeCinemaHall();
+                
             }
         }
     }

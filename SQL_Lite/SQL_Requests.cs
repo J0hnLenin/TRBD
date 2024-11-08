@@ -222,6 +222,37 @@ namespace SQL_Lite
                     start_time,
                     duration";
         }
+        public static string SelectSessionsWithRows()
+        {
+            return @"SELECT
+                    session_id AS 'id',
+                    COUNT(row_id) AS 'Количество рядов',
+                    MAX(num_seats) AS 'Максимальное количество строк в ряду',
+                    hall.hall_id,
+                    movie_title AS 'Фильм',
+                    hall_title AS 'Зал',
+                    strftime('%d.%m.%Y', start_time) AS 'Дата сеанса',
+                    strftime('%H:%M', start_time) AS 'Время начала',
+                    strftime('%H:%M', 
+                            (strftime('%s', start_time) 
+		                    + strftime('%s', duration)),
+			                    'unixepoch') AS 'Время завершения',
+                    cost AS 'Стоимость'
+                    FROM session
+                    INNER JOIN movie ON
+                    session.movie_id = movie.movie_id
+                    INNER JOIN hall ON
+                    session.hall_id = hall.hall_id
+                    INNER JOIN row ON
+                    hall.hall_id = row.hall_id
+                    GROUP BY
+                    session_id,
+                    movie_title,
+                    hall_title,
+                    start_time,
+                    duration,
+                    cost";
+        }
         public static string SelectOtherSeats()
         {
             return @"SELECT
@@ -276,6 +307,14 @@ namespace SQL_Lite
                     (hall_id, movie_id, start_time, cost)
                     VALUES 
                     (@hall_id, @movie_id, @start_time, @cost)";
+        }
+        public static string InsertTicket()
+        {
+            return @"INSERT 
+                    INTO ticket
+                    (client_id, session_id, purchase_time, row, seat)
+                    VALUES 
+                    (@client_id, @session_id, strftime('%Y-%m-%d %H:%M:%S', datetime('now')), @row, @seat)";
         }
         public static string InsertMovieGenres(int valuesCount)
         {
@@ -352,6 +391,17 @@ namespace SQL_Lite
                     cost=@cost
                     WHERE 
                     movie_id = @id";
+        }
+        public static string UpdateTicket()
+        {
+            return @"UPDATE ticket
+                    SET
+                    client_id = @client_id, 
+                    session_id = @session_id, 
+                    row = @row, 
+                    seat = @seat
+                    WHERE 
+                    ticket_id = @id";
         }
 
         /////////////////////////////////////
