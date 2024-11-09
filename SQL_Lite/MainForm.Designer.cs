@@ -38,6 +38,9 @@
             this.referenceTableStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.genreMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vacancySeatReportMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.revenueReportMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.genreVievsReportMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,16 +117,40 @@
             // genreMenuItem
             // 
             this.genreMenuItem.Name = "genreMenuItem";
-            this.genreMenuItem.Size = new System.Drawing.Size(131, 26);
+            this.genreMenuItem.Size = new System.Drawing.Size(180, 26);
             this.genreMenuItem.Text = "Жанры";
             this.genreMenuItem.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // reportStripMenuItem
             // 
+            this.reportStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.vacancySeatReportMenuItem,
+            this.revenueReportMenuItem,
+            this.genreVievsReportMenuItem});
             this.reportStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.reportStripMenuItem.Name = "reportStripMenuItem";
             this.reportStripMenuItem.Size = new System.Drawing.Size(76, 25);
             this.reportStripMenuItem.Text = "Отчёты";
+            this.reportStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.reportStripMenuItem_DropDownItemClicked);
+            // 
+            // vacancySeatReportMenuItem
+            // 
+            this.vacancySeatReportMenuItem.Name = "vacancySeatReportMenuItem";
+            this.vacancySeatReportMenuItem.Size = new System.Drawing.Size(424, 26);
+            this.vacancySeatReportMenuItem.Text = "Отчёт о наличии свободных мест";
+            this.vacancySeatReportMenuItem.Click += new System.EventHandler(this.reportMenuItem1_Click);
+            // 
+            // revenueReportMenuItem
+            // 
+            this.revenueReportMenuItem.Name = "revenueReportMenuItem";
+            this.revenueReportMenuItem.Size = new System.Drawing.Size(424, 26);
+            this.revenueReportMenuItem.Text = "Отчёт о годовой выручке";
+            // 
+            // genreVievsReportMenuItem
+            // 
+            this.genreVievsReportMenuItem.Name = "genreVievsReportMenuItem";
+            this.genreVievsReportMenuItem.Size = new System.Drawing.Size(424, 26);
+            this.genreVievsReportMenuItem.Text = "Отчёт о просмотрах фильмов в разрезе жанров";
             // 
             // MainForm
             // 
@@ -157,6 +184,9 @@
         private System.Windows.Forms.ToolStripMenuItem ticketMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientMenuItem;
         private System.Windows.Forms.ToolStripMenuItem genreMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vacancySeatReportMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem revenueReportMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem genreVievsReportMenuItem;
     }
 }
 

@@ -5,12 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static iText.StyledXmlParser.Jsoup.Select.Evaluator;
 
 namespace SQL_Lite
 {
     internal class DataGridExtension
     {
-        public static void FillDataGridView(DataGridView dataGridView, string request, string[,] requestParameters, int hiddenRows = 0)
+        public static async void FillDataGridView(DataGridView dataGridView, string request, string[,] requestParameters, int hiddenRows = 0, int id=-1)
+        {
+            await FillDataGridViewTask(dataGridView, request, requestParameters, hiddenRows, id);
+        }
+        public static async Task FillDataGridViewTask(DataGridView dataGridView, string request, string[,] requestParameters, int hiddenRows = 0, int id = -1)
         {
             dataGridView.Rows.Clear();
             dataGridView.Columns.Clear();
@@ -33,6 +38,10 @@ namespace SQL_Lite
             }
 
             connection.Close();
+
+            dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            SelectRowID(dataGridView, id, hiddenRows);
         }
         public static void SelectRowID(DataGridView dataGrid, int id, int hiddenRows)
         {            
@@ -60,10 +69,7 @@ namespace SQL_Lite
         public static void UpdateDataGridView(DataGridView dataGrid, string query, string[,] queryParameters, int hiddenRows=1, int id=-1)
         {
             dataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            FillDataGridView(dataGrid, query, queryParameters, hiddenRows);
-            dataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            SelectRowID(dataGrid, id, hiddenRows);
+            FillDataGridView(dataGrid, query, queryParameters, hiddenRows, id);
         }
     }
 }

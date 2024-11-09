@@ -48,7 +48,6 @@ namespace SQL_Lite
                 int startPositionWidth = (parentWidth - d) / 2;
                 Location = new Point(startPositionWidth + seatNumber * (Width+margin), headerHeigth + rowNumber * (Height+margin));
                 BackColor = color;
-                Console.WriteLine("{0} {1}", Location.X.ToString(), Location.Y.ToString());
             }
         }
         private Seat[,] seats;

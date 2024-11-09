@@ -139,7 +139,7 @@ namespace SQL_Lite
         public static string SelectClietTiketsByID()
         {
             return @"SELECT
-                    ticket_id AS 'id',
+                    ticket_id AS 'Номер билета',
                     movie_title AS 'Фильм',
                     strftime('%d.%m.%Y %H:%M:%S', purchase_time) AS 'Время покупки',
                     hall_title AS 'Зал',
@@ -262,6 +262,83 @@ namespace SQL_Lite
                     WHERE
                     ticket_id <> @ticket_id
                     AND session_id = @session_id";
+        }
+
+        public static string SelectVacancySeatReport()
+        {
+            return @"SELECT
+                    session.session_id AS 'id',
+                    movie_title AS 'Фильм',
+                    hall_title AS 'Зал',
+                    strftime('%d.%m.%Y', start_time) AS 'Дата сеанса',
+                    strftime('%H:%M', start_time) AS 'Время начала',
+                    strftime('%H:%M', 
+                            (strftime('%s', start_time) 
+		                    + strftime('%s', duration)),
+			                    'unixepoch') AS 'Время завершения',
+					SUM(num_seats) AS 'Мест в зале',
+					(SELECT COUNT(ticket_id) FROM ticket WHERE ticket.session_id = session.session_id) AS 'Занятых мест',
+                    SUM(num_seats) - (SELECT COUNT(ticket_id) FROM ticket WHERE ticket.session_id = session.session_id) AS 'Свободных мест'
+                    FROM session
+                    INNER JOIN movie ON
+                    session.movie_id = movie.movie_id
+                    INNER JOIN hall ON
+                    session.hall_id = hall.hall_id
+                    INNER JOIN row ON
+                    hall.hall_id = row.hall_id
+                    GROUP BY
+                    session.session_id,
+                    movie_title,
+                    hall_title,
+                    start_time,
+                    duration";
+        }
+
+        public static string SelectRevenueReport()
+        {
+            return @"SELECT 
+	                m.id,
+                    m.month AS 'Месяц',
+                    ROUND(COALESCE(SUM(s.cost), 0), 1)||'0 р.' AS 'Выручка'
+                    FROM 
+                    (SELECT strftime('%m.%Y', date('now', 'start of year', '+' || (n || ' month'))) AS month,
+	                n AS id
+                    FROM (
+                        SELECT 0 AS n UNION ALL SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4
+                        UNION ALL SELECT 5 UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9
+                        UNION ALL SELECT 10 UNION ALL SELECT 11
+                    )) m
+                    LEFT JOIN 
+                    session s ON strftime('%m.%Y', s.start_time) = m.month
+                    LEFT JOIN 
+                    ticket t ON s.session_id = t.session_id
+                    GROUP BY 
+                    m.month
+                    ORDER BY 
+                    m.month";
+        }
+        public static string SelectGenreVievsReport()
+        {
+            return @"SELECT 
+	                genre.genre_id AS 'id',
+	                genre.genre_title AS 'Жанр', 
+	                COUNT(movie_genre.movie_id) AS 'Фильмов в данном жанре',
+	                COUNT(ticket.ticket_id) AS 'Сумма просмотров фильмов',
+	                ROUND(COUNT(ticket.ticket_id)* 1.0/COUNT(movie_genre.movie_id), 2) AS 'Среднее значение просмотров'
+	                FROM 
+	                genre
+	                LEFT JOIN 
+	                movie_genre ON 
+	                genre.genre_id = movie_genre.genre_id
+	                LEFT JOIN 
+	                session ON movie_genre.movie_id = session.movie_id 
+	                LEFT JOIN
+	                ticket ON ticket.session_id = session.session_id
+	                GROUP BY 
+	                genre.genre_id,
+	                genre.genre_title
+	                ORDER BY 
+	                COUNT(ticket.ticket_id) DESC";
         }
 
         /////////////////////////////////////

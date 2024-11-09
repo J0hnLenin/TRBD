@@ -42,7 +42,7 @@ namespace SQL_Lite
 
         }
 
-        private void OpenMDIChildren(ToolStripItemClickedEventArgs e)
+        private void OpenMDIChildren(ToolStripItemClickedEventArgs e, bool report=false)
         {
             bool alreadyExists = false;
             for (int i = 0; i < this.MdiChildren.Length; i++)
@@ -56,7 +56,7 @@ namespace SQL_Lite
             }
             if (!alreadyExists)
             {
-                ChildForm newMDIChild = new ChildForm(e);
+                ChildForm newMDIChild = new ChildForm(e, report);
                 newMDIChild.MdiParent = this;
                 newMDIChild.Show();
             }
@@ -83,6 +83,16 @@ namespace SQL_Lite
         private void movieMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void reportMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reportStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            OpenMDIChildren(e, report: true);
         }
     }
 }

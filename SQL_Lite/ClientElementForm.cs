@@ -37,7 +37,7 @@ namespace SQL_Lite
                 }
                 connection.Close();
 
-                DataGridExtension.UpdateDataGridView(ticketsDataGridView, SQL_Requests.SelectClietTiketsByID(), parameters);
+                DataGridExtension.UpdateDataGridView(ticketsDataGridView, SQL_Requests.SelectClietTiketsByID(), parameters, hiddenRows: 0);
             }
         }
 
